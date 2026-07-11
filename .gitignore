@@ -1,0 +1,19 @@
+# Local agent guidance
+Agent Instructions/
+
+# Local technical planning context
+PORTFOLIO_IMPLEMENTATION_PLAN.md
+
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Tooling and OS files
+.DS_Store
+*.local
+*.tsbuildinfo
