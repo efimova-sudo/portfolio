@@ -1,0 +1,1435 @@
+{
+  "version": "2.14",
+  "children": [
+    {
+      "type": "frame",
+      "id": "LBTaa",
+      "x": 0,
+      "y": 0,
+      "name": "Portfolio / Desktop",
+      "clip": true,
+      "width": 1440,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "DPxR7",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 88,
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "padding": [
+            0,
+            80
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "c6fnPy",
+              "name": "Brand",
+              "fill": "$accent-orange",
+              "content": "AI / AUTO",
+              "fontFamily": "$font-mono",
+              "fontSize": 14,
+              "fontWeight": "700",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "frame",
+              "id": "Jzudi",
+              "name": "Navigation",
+              "gap": 30,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "L84FPm",
+                  "name": "Nav / What I Do",
+                  "fill": "$muted",
+                  "content": "What I Do",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RtIBS",
+                  "name": "Nav / About",
+                  "fill": "$muted",
+                  "content": "About",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "G9z9hm",
+                  "name": "Nav / Skills",
+                  "fill": "$muted",
+                  "content": "Skills",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "YhSrH",
+                  "name": "Nav / Projects",
+                  "fill": "$muted",
+                  "content": "Projects",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Wkdos",
+                  "name": "Nav / Contact",
+                  "fill": "$muted",
+                  "content": "Contact",
+                  "fontFamily": "$font-body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Q4UwZ5",
+          "name": "01 / Hero",
+          "width": "fill_container",
+          "height": 780,
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 64,
+          "padding": 80,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "d37kPj",
+              "name": "Hero / Copy",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Wcae4",
+                  "name": "Hero / Eyebrow",
+                  "fill": "$accent-orange",
+                  "content": "PORTFOLIO DRAFT / 2026",
+                  "fontFamily": "$font-mono",
+                  "fontSize": 13,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.4
+                },
+                {
+                  "type": "text",
+                  "id": "rA4qI",
+                  "name": "Hero / Name Pending",
+                  "fill": "$muted",
+                  "content": "Name pending resume",
+                  "fontFamily": "$font-body",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "yT2QJ",
+                  "name": "Hero / Title",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 100,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "$text",
+                        "position": 0
+                      },
+                      {
+                        "color": "$text",
+                        "position": 0.42
+                      },
+                      {
+                        "color": "$accent-orange",
+                        "position": 0.64
+                      },
+                      {
+                        "color": "$accent-pink",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "AI Solutions &\nAutomation Engineer",
+                  "lineHeight": 0.95,
+                  "fontFamily": "$font-heading",
+                  "fontSize": 84,
+                  "fontWeight": "700",
+                  "letterSpacing": -3
+                },
+                {
+                  "type": "text",
+                  "id": "fOgQb",
+                  "name": "Hero / Positioning",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Building practical AI-powered workflows, business automations, agents, and integrations on a strong backend engineering foundation.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "$font-body",
+                  "fontSize": 21,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "S1XdtC",
+                  "name": "Hero / Actions",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "p8AFz",
+                      "name": "Button / Projects",
+                      "fill": "$accent-orange",
+                      "cornerRadius": 999,
+                      "padding": [
+                        14,
+                        22
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "o0UaBu",
+                          "name": "Button / Projects Label",
+                          "fill": "#FFFFFF",
+                          "content": "View projects",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "P7PqV",
+                      "name": "Button / GitHub",
+                      "cornerRadius": 999,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "padding": [
+                        14,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "spXQa",
+                          "name": "Button / GitHub Label",
+                          "fill": "$muted",
+                          "content": "GitHub",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w7UXb",
+                      "name": "Button / LinkedIn",
+                      "cornerRadius": 999,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "padding": [
+                        14,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JwTFB",
+                          "name": "Button / LinkedIn Label",
+                          "fill": "$muted",
+                          "content": "LinkedIn",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WwakN",
+                      "name": "Button / Resume",
+                      "cornerRadius": 999,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "padding": [
+                        14,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hGFE3",
+                          "name": "Button / Resume Label",
+                          "fill": "$muted",
+                          "content": "Resume",
+                          "fontFamily": "$font-body",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bOb8n",
+              "name": "Hero / Photo Placeholder",
+              "width": 430,
+              "height": 560,
+              "fill": "$surface",
+              "cornerRadius": 20,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BLYUA",
+                  "name": "Hero / Photo Placeholder Label",
+                  "fill": "$muted",
+                  "content": "PHOTO / VISUAL PENDING",
+                  "fontFamily": "$font-mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "y2TdxK",
+          "name": "02 / What I Do",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "layout": "vertical",
+          "gap": 42,
+          "padding": [
+            96,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "PRyeg",
+              "name": "What I Do / Eyebrow",
+              "fill": "$accent-orange",
+              "content": "CAPABILITIES",
+              "fontFamily": "$font-mono",
+              "fontSize": 13,
+              "fontWeight": "600",
+              "letterSpacing": 1.4
+            },
+            {
+              "type": "text",
+              "id": "Xw7KV",
+              "name": "What I Do / Title",
+              "fill": "$text",
+              "content": "What I Do",
+              "fontFamily": "$font-heading",
+              "fontSize": 64,
+              "fontWeight": "700",
+              "letterSpacing": -2
+            },
+            {
+              "type": "frame",
+              "id": "I5Te1",
+              "name": "What I Do / Card Rows",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "x87TTo",
+                  "name": "What I Do / Row 1",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RscMd",
+                      "name": "Service / Business Process Automation",
+                      "width": "fill_container",
+                      "height": 190,
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "padding": 26,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "aSRgo",
+                          "name": "Service / Business Process Automation Number",
+                          "fill": "$accent-orange",
+                          "content": "01",
+                          "fontFamily": "$font-mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "MjpRW",
+                          "name": "Service / Business Process Automation Title",
+                          "fill": "$text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Business Process Automation",
+                          "lineHeight": 1.1,
+                          "fontFamily": "$font-heading",
+                          "fontSize": 24,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cS7eK",
+                      "name": "Service / AI-Powered Workflows",
+                      "width": "fill_container",
+                      "height": 190,
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "padding": 26,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jC5Fd",
+                          "name": "Service / AI-Powered Workflows Number",
+                          "fill": "$accent-orange",
+                          "content": "02",
+                          "fontFamily": "$font-mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NhpfC",
+                          "name": "Service / AI-Powered Workflows Title",
+                          "fill": "$text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "AI-Powered Workflows",
+                          "lineHeight": 1.1,
+                          "fontFamily": "$font-heading",
+                          "fontSize": 24,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "H4KGss",
+                      "name": "Service / AI Agents",
+                      "width": "fill_container",
+                      "height": 190,
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "padding": 26,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "XIR1D",
+                          "name": "Service / AI Agents Number",
+                          "fill": "$accent-orange",
+                          "content": "03",
+                          "fontFamily": "$font-mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "A5r9t0",
+                          "name": "Service / AI Agents Title",
+                          "fill": "$text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "AI Agents",
+                          "lineHeight": 1.1,
+                          "fontFamily": "$font-heading",
+                          "fontSize": 24,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QypS0",
+                  "name": "What I Do / Row 2",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "m3Mg5",
+                      "name": "Service / API & Platform Integrations",
+                      "width": "fill_container",
+                      "height": 190,
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "padding": 26,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "EdEZ7",
+                          "name": "Service / API & Platform Integrations Number",
+                          "fill": "$accent-orange",
+                          "content": "04",
+                          "fontFamily": "$font-mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uNERK",
+                          "name": "Service / API & Platform Integrations Title",
+                          "fill": "$text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "API & Platform Integrations",
+                          "lineHeight": 1.1,
+                          "fontFamily": "$font-heading",
+                          "fontSize": 24,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rdXci",
+                      "name": "Service / Backend Development",
+                      "width": "fill_container",
+                      "height": 190,
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "padding": 26,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NPF04",
+                          "name": "Service / Backend Development Number",
+                          "fill": "$accent-orange",
+                          "content": "05",
+                          "fontFamily": "$font-mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "K614qX",
+                          "name": "Service / Backend Development Title",
+                          "fill": "$text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Backend Development",
+                          "lineHeight": 1.1,
+                          "fontFamily": "$font-heading",
+                          "fontSize": 24,
+                          "fontWeight": "650"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gUsTa",
+          "name": "03 / Engineering Background & About",
+          "width": "fill_container",
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 80,
+          "padding": [
+            112,
+            80
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "r4WhHs",
+              "name": "About / Heading",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "iaeyA",
+                  "name": "About / Eyebrow",
+                  "fill": "$accent-orange",
+                  "content": "ENGINEERING FOUNDATION",
+                  "fontFamily": "$font-mono",
+                  "fontSize": 13,
+                  "fontWeight": "600",
+                  "letterSpacing": 1.4
+                },
+                {
+                  "type": "text",
+                  "id": "torqO",
+                  "name": "About / Title",
+                  "fill": "$text",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Backend depth for practical AI systems",
+                  "lineHeight": 1.02,
+                  "fontFamily": "$font-heading",
+                  "fontSize": 62,
+                  "fontWeight": "700",
+                  "letterSpacing": -2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "O6wP9f",
+              "name": "About / Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 42,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kSpKG",
+                  "name": "About / Text",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "I am transitioning from six years of commercial C#/.NET backend development into AI solutions and automation, bringing production-minded engineering practices to workflows, integrations, APIs, databases, and cloud systems.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "$font-body",
+                  "fontSize": 21,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Vmqre",
+                  "name": "About / Experience Stat",
+                  "gap": 18,
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zm7eb",
+                      "name": "About / Experience Number",
+                      "fill": "$accent-orange",
+                      "content": "6",
+                      "lineHeight": 0.85,
+                      "fontFamily": "$font-heading",
+                      "fontSize": 92,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "svTbC",
+                      "name": "About / Experience Label",
+                      "fill": "$muted",
+                      "content": "years of commercial\ndevelopment",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$font-body",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SAZ0d",
+          "name": "04 / Skills",
+          "width": "fill_container",
+          "height": 960,
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "layout": "vertical",
+          "gap": 42,
+          "padding": [
+            104,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "R7h3wN",
+              "name": "Skills / Eyebrow",
+              "fill": "$accent-orange",
+              "content": "TECHNICAL MAP",
+              "fontFamily": "$font-mono",
+              "fontSize": 13,
+              "fontWeight": "600",
+              "letterSpacing": 1.4
+            },
+            {
+              "type": "text",
+              "id": "s5kJl",
+              "name": "Skills / Title",
+              "fill": "$text",
+              "content": "Skills",
+              "fontFamily": "$font-heading",
+              "fontSize": 64,
+              "fontWeight": "700",
+              "letterSpacing": -2
+            },
+            {
+              "type": "frame",
+              "id": "Pf2VM",
+              "name": "Skills / Card Rows",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ueTGW",
+                  "name": "Skills / Row 1",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DG8Yb",
+                      "name": "Skill Category / AI & Automation",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jkIgQ",
+                          "name": "Skill Category / AI & Automation Title",
+                          "fill": "$text",
+                          "content": "AI & Automation",
+                          "fontFamily": "$font-heading",
+                          "fontSize": 26,
+                          "fontWeight": "650"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jlIoQ",
+                          "name": "Skill List / AI & Automation",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "n8n  ·  LLM workflows  ·  Prompt engineering  ·  AI agents fundamentals  ·  RAG fundamentals  ·  Workflow automation  ·  Human-in-the-loop  ·  Error handling  ·  Logging  ·  Codex  ·  Claude",
+                          "lineHeight": 1.7,
+                          "fontFamily": "$font-mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lF447",
+                      "name": "Skill Category / Backend",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "gjky9",
+                          "name": "Skill Category / Backend Title",
+                          "fill": "$text",
+                          "content": "Backend",
+                          "fontFamily": "$font-heading",
+                          "fontSize": 26,
+                          "fontWeight": "650"
+                        },
+                        {
+                          "type": "text",
+                          "id": "RSZMb",
+                          "name": "Skill List / Backend",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": ".NET/C#  ·  ASP.NET Core  ·  Python  ·  JavaScript",
+                          "lineHeight": 1.7,
+                          "fontFamily": "$font-mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Q5JSS0",
+                  "name": "Skills / Row 2",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fOAOU",
+                      "name": "Skill Category / APIs & Integrations",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Lkpoi",
+                          "name": "Skill Category / APIs & Integrations Title",
+                          "fill": "$text",
+                          "content": "APIs & Integrations",
+                          "fontFamily": "$font-heading",
+                          "fontSize": 26,
+                          "fontWeight": "650"
+                        },
+                        {
+                          "type": "text",
+                          "id": "x319q0",
+                          "name": "Skill List / APIs & Integrations",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "REST APIs  ·  Webhooks  ·  GoHighLevel  ·  QuickBooks",
+                          "lineHeight": 1.7,
+                          "fontFamily": "$font-mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cIolZ",
+                      "name": "Skill Category / Databases",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bAjmu",
+                          "name": "Skill Category / Databases Title",
+                          "fill": "$text",
+                          "content": "Databases",
+                          "fontFamily": "$font-heading",
+                          "fontSize": 26,
+                          "fontWeight": "650"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qwzkj",
+                          "name": "Skill List / Databases",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "SQL",
+                          "lineHeight": 1.7,
+                          "fontFamily": "$font-mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EfEQ9",
+                  "name": "Skills / Row 3",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hRatR",
+                      "name": "Skill Category / Cloud & Infrastructure",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "y11RTe",
+                          "name": "Skill Category / Cloud & Infrastructure Title",
+                          "fill": "$text",
+                          "content": "Cloud & Infrastructure",
+                          "fontFamily": "$font-heading",
+                          "fontSize": 26,
+                          "fontWeight": "650"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Hek5H",
+                          "name": "Skill List / Cloud & Infrastructure",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Azure  ·  AWS  ·  Docker",
+                          "lineHeight": 1.7,
+                          "fontFamily": "$font-mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IxLZu",
+                      "name": "Skill Category / Tools",
+                      "width": "fill_container",
+                      "fill": "$surface",
+                      "cornerRadius": 14,
+                      "stroke": "$border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 24,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "W877FX",
+                          "name": "Skill Category / Tools Title",
+                          "fill": "$text",
+                          "content": "Tools",
+                          "fontFamily": "$font-heading",
+                          "fontSize": 26,
+                          "fontWeight": "650"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ay75t",
+                          "name": "Skill List / Tools",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Git  ·  GitHub  ·  Cursor  ·  Replit  ·  HTML  ·  CSS  ·  WordPress  ·  Jira  ·  ClickUp  ·  Notion  ·  Trello  ·  Slack  ·  Figma  ·  Miro",
+                          "lineHeight": 1.7,
+                          "fontFamily": "$font-mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DdN9F",
+          "name": "05 / Featured AI & Automation Projects",
+          "width": "fill_container",
+          "height": 680,
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "layout": "vertical",
+          "gap": 36,
+          "padding": [
+            104,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Clw8d",
+              "name": "Projects / Eyebrow",
+              "fill": "$accent-orange",
+              "content": "SELECTED SYSTEMS",
+              "fontFamily": "$font-mono",
+              "fontSize": 13,
+              "fontWeight": "600",
+              "letterSpacing": 1.4
+            },
+            {
+              "type": "text",
+              "id": "R24ZBK",
+              "name": "Projects / Title",
+              "fill": "$text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Featured AI & Automation Projects",
+              "lineHeight": 1.02,
+              "fontFamily": "$font-heading",
+              "fontSize": 62,
+              "fontWeight": "700",
+              "letterSpacing": -2
+            },
+            {
+              "type": "text",
+              "id": "e689Md",
+              "name": "Projects / Description",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 760,
+              "content": "Primary case studies for automation, AI workflows, AI agents, and integrations.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-body",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "DuAKE",
+              "name": "Projects / Empty State",
+              "width": "fill_container",
+              "height": 210,
+              "fill": "$surface",
+              "cornerRadius": 14,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 30,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Kwy2k",
+                  "name": "Projects / Empty State Title",
+                  "fill": "$text",
+                  "content": "Project case studies pending",
+                  "fontFamily": "$font-heading",
+                  "fontSize": 25,
+                  "fontWeight": "650"
+                },
+                {
+                  "type": "text",
+                  "id": "yy2Yd",
+                  "name": "Projects / Empty State Description",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Cards will contain: title · short description · problem · solution · role · technologies · architecture or workflow · GitHub · demo · dedicated project page",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xzpMV",
+          "name": "06 / Selected Previous Work",
+          "width": "fill_container",
+          "height": 590,
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "layout": "vertical",
+          "gap": 36,
+          "padding": [
+            104,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "FSYDS",
+              "name": "Previous Work / Eyebrow",
+              "fill": "$accent-orange",
+              "content": "ADDITIONAL WORK",
+              "fontFamily": "$font-mono",
+              "fontSize": 13,
+              "fontWeight": "600",
+              "letterSpacing": 1.4
+            },
+            {
+              "type": "text",
+              "id": "isfFf",
+              "name": "Previous Work / Title",
+              "fill": "$text",
+              "content": "Selected Previous Work",
+              "fontFamily": "$font-heading",
+              "fontSize": 62,
+              "fontWeight": "700",
+              "letterSpacing": -2
+            },
+            {
+              "type": "text",
+              "id": "ffGGI",
+              "name": "Previous Work / Description",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 760,
+              "content": "A secondary collection of confirmed websites and applications.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-body",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "bA42J",
+              "name": "Previous Work / Empty State",
+              "width": "fill_container",
+              "height": 150,
+              "cornerRadius": 14,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "padding": 30,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yXnBi",
+                  "name": "Previous Work / Empty State Description",
+                  "fill": "$muted",
+                  "content": "Previous work cards will appear after project materials are provided.",
+                  "fontFamily": "$font-mono",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bKlDx",
+          "name": "07 / Contact",
+          "width": "fill_container",
+          "height": 560,
+          "layout": "vertical",
+          "gap": 36,
+          "padding": [
+            104,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "B4QKOL",
+              "name": "Contact / Eyebrow",
+              "fill": "$accent-orange",
+              "content": "GET IN TOUCH",
+              "fontFamily": "$font-mono",
+              "fontSize": 13,
+              "fontWeight": "600",
+              "letterSpacing": 1.4
+            },
+            {
+              "type": "text",
+              "id": "LMSb8",
+              "name": "Contact / Title",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 90,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "$text",
+                    "position": 0
+                  },
+                  {
+                    "color": "$accent-orange",
+                    "position": 0.58
+                  },
+                  {
+                    "color": "$accent-pink",
+                    "position": 1
+                  }
+                ]
+              },
+              "textGrowth": "fixed-width",
+              "width": 900,
+              "content": "Let’s build useful systems.",
+              "fontFamily": "$font-heading",
+              "fontSize": 68,
+              "fontWeight": "700",
+              "letterSpacing": -2
+            },
+            {
+              "type": "text",
+              "id": "mjFdc",
+              "name": "Contact / Description",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 720,
+              "content": "Contact links will become active when the resume and profile details are provided.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font-body",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "zfjwD",
+              "name": "Contact / Links",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KcU0S",
+                  "name": "Contact / Email — pending",
+                  "width": "fill_container",
+                  "height": 74,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yq6en",
+                      "name": "Contact / Email — pending Label",
+                      "fill": "$muted",
+                      "content": "Email — pending",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gVwOP",
+                  "name": "Contact / LinkedIn — pending",
+                  "width": "fill_container",
+                  "height": 74,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YnpFJ",
+                      "name": "Contact / LinkedIn — pending Label",
+                      "fill": "$muted",
+                      "content": "LinkedIn — pending",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "M2uoa",
+                  "name": "Contact / GitHub — pending",
+                  "width": "fill_container",
+                  "height": 74,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "o9PaB",
+                      "name": "Contact / GitHub — pending Label",
+                      "fill": "$muted",
+                      "content": "GitHub — pending",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HKMEn",
+                  "name": "Contact / Resume — pending",
+                  "width": "fill_container",
+                  "height": 74,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uLsWd",
+                      "name": "Contact / Resume — pending Label",
+                      "fill": "$muted",
+                      "content": "Resume — pending",
+                      "fontFamily": "$font-body",
+                      "fontSize": 15,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "bg": {
+      "type": "color",
+      "value": "#0B0909"
+    },
+    "surface": {
+      "type": "color",
+      "value": "#151111"
+    },
+    "surface-soft": {
+      "type": "color",
+      "value": "#1B1515"
+    },
+    "border": {
+      "type": "color",
+      "value": "#332929"
+    },
+    "text": {
+      "type": "color",
+      "value": "#F7F4F2"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#AAA0A0"
+    },
+    "accent-red": {
+      "type": "color",
+      "value": "#FF334E"
+    },
+    "accent-orange": {
+      "type": "color",
+      "value": "#FF7433"
+    },
+    "accent-pink": {
+      "type": "color",
+      "value": "#FF3CA6"
+    },
+    "font-heading": {
+      "type": "string",
+      "value": "Funnel Sans"
+    },
+    "font-body": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "font-mono": {
+      "type": "string",
+      "value": "Geist Mono"
+    }
+  },
+  "fileToken": "8d6895ef-78cc-4a82-b0c1-86b46c53a271"
+}
