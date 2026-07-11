@@ -34,7 +34,7 @@
               "id": "c6fnPy",
               "name": "Brand",
               "fill": "$accent-orange",
-              "content": "AI / AUTO",
+              "content": "ANASTASIA EFIMOVA / AI / AUTO / BACKEND",
               "fontFamily": "$font-mono",
               "fontSize": 14,
               "fontWeight": "700",
@@ -106,13 +106,16 @@
           "id": "Q4UwZ5",
           "name": "01 / Hero",
           "width": "fill_container",
-          "height": 780,
+          "height": 820,
           "stroke": "$border",
           "strokeWidth": {
             "bottom": 1
           },
-          "gap": 64,
-          "padding": 80,
+          "gap": 56,
+          "padding": [
+            72,
+            80
+          ],
           "alignItems": "center",
           "children": [
             {
@@ -121,29 +124,8 @@
               "name": "Hero / Copy",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": 24,
+              "gap": 26,
               "children": [
-                {
-                  "type": "text",
-                  "id": "Wcae4",
-                  "name": "Hero / Eyebrow",
-                  "fill": "$accent-orange",
-                  "content": "PORTFOLIO DRAFT / 2026",
-                  "fontFamily": "$font-mono",
-                  "fontSize": 13,
-                  "fontWeight": "600",
-                  "letterSpacing": 1.4
-                },
-                {
-                  "type": "text",
-                  "id": "rA4qI",
-                  "name": "Hero / Name Pending",
-                  "fill": "$muted",
-                  "content": "Name pending resume",
-                  "fontFamily": "$font-body",
-                  "fontSize": 17,
-                  "fontWeight": "normal"
-                },
                 {
                   "type": "text",
                   "id": "yT2QJ",
@@ -152,7 +134,7 @@
                     "type": "gradient",
                     "gradientType": "linear",
                     "enabled": true,
-                    "rotation": 100,
+                    "rotation": 180,
                     "size": {
                       "height": 1
                     },
@@ -163,11 +145,15 @@
                       },
                       {
                         "color": "$text",
-                        "position": 0.42
+                        "position": 0.3
+                      },
+                      {
+                        "color": "$accent-red",
+                        "position": 0.4
                       },
                       {
                         "color": "$accent-orange",
-                        "position": 0.64
+                        "position": 0.68
                       },
                       {
                         "color": "$accent-pink",
@@ -177,50 +163,127 @@
                   },
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "AI Solutions &\nAutomation Engineer",
-                  "lineHeight": 0.95,
+                  "content": "AI Solutions &\nAutomation\nEngineer.",
+                  "lineHeight": 0.9,
                   "fontFamily": "$font-heading",
-                  "fontSize": 84,
+                  "fontSize": 80,
                   "fontWeight": "700",
                   "letterSpacing": -3
                 },
                 {
-                  "type": "text",
-                  "id": "fOgQb",
-                  "name": "Hero / Positioning",
-                  "fill": "$muted",
-                  "textGrowth": "fixed-width",
+                  "type": "frame",
+                  "id": "x2tJk",
+                  "name": "Hero / Intro",
                   "width": "fill_container",
-                  "content": "Building practical AI-powered workflows, business automations, agents, and integrations on a strong backend engineering foundation.",
-                  "lineHeight": 1.55,
-                  "fontFamily": "$font-body",
-                  "fontSize": 21,
-                  "fontWeight": "normal"
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Sg6qM",
+                      "name": "Hero / Intro First Line",
+                      "gap": 5,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OgC0V",
+                          "name": "Hero / Intro Prefix",
+                          "fill": "$muted",
+                          "content": "Hi, I’m",
+                          "fontFamily": "$font-body",
+                          "fontSize": 19,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VpIxs",
+                          "name": "Hero / Intro Name",
+                          "fill": "$accent-orange",
+                          "content": "Anastasia Efimova.",
+                          "fontFamily": "$font-body",
+                          "fontSize": 19,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xsQcF",
+                          "name": "Hero / Intro First Line Continuation",
+                          "fill": "$muted",
+                          "content": "I design and build AI-powered workflows,",
+                          "fontFamily": "$font-body",
+                          "fontSize": 19,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "XqkAP",
+                      "name": "Hero / Intro Continuation",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "business automations, agents, and integrations — backed by six years of C#/.NET engineering.",
+                      "lineHeight": 1.55,
+                      "fontFamily": "$font-body",
+                      "fontSize": 19,
+                      "fontWeight": "normal"
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
                   "id": "S1XdtC",
                   "name": "Hero / Actions",
-                  "gap": 12,
+                  "gap": 14,
                   "alignItems": "center",
                   "children": [
                     {
                       "type": "frame",
                       "id": "p8AFz",
-                      "name": "Button / Projects",
-                      "fill": "$accent-orange",
-                      "cornerRadius": 999,
+                      "name": "Button / View Projects",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 270,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "$accent-red",
+                            "position": 0
+                          },
+                          {
+                            "color": "$accent-orange",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 10,
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#FF743344",
+                        "offset": {
+                          "x": 0,
+                          "y": 8
+                        },
+                        "blur": 24
+                      },
                       "padding": [
-                        14,
-                        22
+                        16,
+                        24
                       ],
                       "children": [
                         {
                           "type": "text",
                           "id": "o0UaBu",
-                          "name": "Button / Projects Label",
+                          "name": "Button / View Projects Label",
                           "fill": "#FFFFFF",
-                          "content": "View projects",
+                          "content": "View Projects",
                           "fontFamily": "$font-body",
                           "fontSize": 15,
                           "fontWeight": "700"
@@ -229,75 +292,196 @@
                     },
                     {
                       "type": "frame",
-                      "id": "P7PqV",
-                      "name": "Button / GitHub",
-                      "cornerRadius": 999,
-                      "stroke": "$border",
-                      "strokeWidth": 1,
-                      "padding": [
-                        14,
-                        20
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "spXQa",
-                          "name": "Button / GitHub Label",
-                          "fill": "$muted",
-                          "content": "GitHub",
-                          "fontFamily": "$font-body",
-                          "fontSize": 15,
-                          "fontWeight": "normal"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "w7UXb",
-                      "name": "Button / LinkedIn",
-                      "cornerRadius": 999,
-                      "stroke": "$border",
-                      "strokeWidth": 1,
-                      "padding": [
-                        14,
-                        20
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "JwTFB",
-                          "name": "Button / LinkedIn Label",
-                          "fill": "$muted",
-                          "content": "LinkedIn",
-                          "fontFamily": "$font-body",
-                          "fontSize": 15,
-                          "fontWeight": "normal"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
                       "id": "WwakN",
                       "name": "Button / Resume",
-                      "cornerRadius": 999,
-                      "stroke": "$border",
+                      "cornerRadius": 10,
+                      "stroke": "$accent-orange",
                       "strokeWidth": 1,
+                      "gap": 9,
                       "padding": [
-                        14,
-                        20
+                        15,
+                        22
                       ],
+                      "alignItems": "center",
                       "children": [
+                        {
+                          "type": "icon",
+                          "id": "guL5C",
+                          "name": "Button / Resume Download Icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "download",
+                          "library": "lucide",
+                          "fill": "$accent-orange"
+                        },
                         {
                           "type": "text",
                           "id": "hGFE3",
                           "name": "Button / Resume Label",
-                          "fill": "$muted",
+                          "fill": "$text",
                           "content": "Resume",
                           "fontFamily": "$font-body",
                           "fontSize": 15,
-                          "fontWeight": "normal"
+                          "fontWeight": "600"
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lD4Fv",
+                  "name": "Hero / Connect",
+                  "layout": "vertical",
+                  "gap": 13,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KPLlB",
+                      "name": "Hero / Connect Label",
+                      "fill": "$muted",
+                      "content": "Connect with me",
+                      "fontFamily": "$font-body",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mdLu2",
+                      "name": "Hero / Connect Links",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "HHHU3",
+                          "name": "Social / Email",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "$surface",
+                          "cornerRadius": 9,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "R2xuE",
+                              "name": "Social / Email Icon",
+                              "width": 19,
+                              "height": 19,
+                              "icon": "mail",
+                              "library": "lucide",
+                              "fill": "$muted"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CgOxn",
+                          "name": "Social / LinkedIn",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "$surface",
+                          "cornerRadius": 9,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "q889C",
+                              "name": "Social / LinkedIn Icon",
+                              "width": 19,
+                              "height": 19,
+                              "icon": "linkedin",
+                              "library": "lucide",
+                              "fill": "$muted"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "eUDgu",
+                          "name": "Social / GitHub",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "$surface",
+                          "cornerRadius": 9,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "IByq8",
+                              "name": "Social / GitHub Icon",
+                              "width": 19,
+                              "height": 19,
+                              "icon": "github",
+                              "library": "lucide",
+                              "fill": "$muted"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gUsy0",
+                          "name": "Social / WhatsApp",
+                          "width": 44,
+                          "height": 44,
+                          "fill": "$surface",
+                          "cornerRadius": 9,
+                          "stroke": "$border",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "qHoYb",
+                              "name": "Social / WhatsApp Icon",
+                              "width": 19,
+                              "height": 19,
+                              "icon": "whatsapp-logo",
+                              "library": "phosphor",
+                              "fill": "$muted"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Fdnz7",
+                  "name": "Hero / Location",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "h6nwq6",
+                      "name": "Hero / Location Icon",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "map-pin",
+                      "library": "lucide",
+                      "fill": "$accent-orange"
+                    },
+                    {
+                      "type": "text",
+                      "id": "H5J3Q",
+                      "name": "Hero / Location Text",
+                      "fill": "$muted",
+                      "content": "Mexico · Worldwide Remote",
+                      "fontFamily": "$font-mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -305,28 +489,563 @@
             },
             {
               "type": "frame",
-              "id": "bOb8n",
-              "name": "Hero / Photo Placeholder",
-              "width": 430,
-              "height": 560,
-              "fill": "$surface",
-              "cornerRadius": 20,
+              "id": "LPddi",
+              "name": "Hero / Terminal",
+              "width": 520,
+              "height": 610,
+              "fill": "#100D0D",
+              "cornerRadius": 18,
               "stroke": "$border",
               "strokeWidth": 1,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#FF743333",
+                "offset": {
+                  "x": 0,
+                  "y": 10
+                },
+                "blur": 36
+              },
               "layout": "vertical",
-              "justifyContent": "center",
-              "alignItems": "center",
               "children": [
                 {
-                  "type": "text",
-                  "id": "BLYUA",
-                  "name": "Hero / Photo Placeholder Label",
-                  "fill": "$muted",
-                  "content": "PHOTO / VISUAL PENDING",
-                  "fontFamily": "$font-mono",
-                  "fontSize": 13,
-                  "fontWeight": "normal",
-                  "letterSpacing": 1
+                  "type": "frame",
+                  "id": "HV3Uz",
+                  "name": "Terminal / Header",
+                  "width": "fill_container",
+                  "height": 58,
+                  "fill": "$surface",
+                  "cornerRadius": [
+                    18,
+                    18,
+                    0,
+                    0
+                  ],
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Vexke",
+                      "name": "Terminal / Window Controls",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "z0Pq10",
+                          "name": "Terminal / Control",
+                          "fill": "$accent-red",
+                          "width": 10,
+                          "height": 10
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "r1MZ7R",
+                          "name": "Terminal / Control",
+                          "fill": "$accent-orange",
+                          "width": 10,
+                          "height": 10
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "lFuej",
+                          "name": "Terminal / Control",
+                          "fill": "$accent-pink",
+                          "width": 10,
+                          "height": 10
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "AVGQg",
+                      "name": "Terminal / Window Title",
+                      "fill": "$muted",
+                      "content": "anastasia@portfolio — zsh",
+                      "fontFamily": "$font-mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.8
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ApTc6",
+                  "name": "Terminal / Body",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 17,
+                  "padding": [
+                    24,
+                    26
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DohFN",
+                      "name": "Terminal / Profile Command",
+                      "fill": "$accent-orange",
+                      "content": "~/portfolio  ›  cat profile.json",
+                      "fontFamily": "$font-mono",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "d8uU7j",
+                      "name": "Terminal / Profile Data",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 9,
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "hZD6y",
+                          "name": "Terminal / name",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "t4t5w",
+                              "name": "Terminal / name Key",
+                              "fill": "$muted",
+                              "content": "\"name\":",
+                              "fontFamily": "$font-mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ViuJJ",
+                              "name": "Terminal / name Value",
+                              "fill": "$accent-pink",
+                              "content": "\"Anastasia Efimova\"",
+                              "fontFamily": "$font-mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "EfimY",
+                          "name": "Terminal / role",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "DgX7B",
+                              "name": "Terminal / role Key",
+                              "fill": "$muted",
+                              "content": "\"role\":",
+                              "fontFamily": "$font-mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "s18YE",
+                              "name": "Terminal / role Value",
+                              "fill": "$accent-pink",
+                              "content": "\"AI Solutions & Automation Engineer\"",
+                              "fontFamily": "$font-mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "e7qB7D",
+                          "name": "Terminal / location",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "W4coNR",
+                              "name": "Terminal / location Key",
+                              "fill": "$muted",
+                              "content": "\"location\":",
+                              "fontFamily": "$font-mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "cbTcV",
+                              "name": "Terminal / location Value",
+                              "fill": "$accent-pink",
+                              "content": "\"Mexico\"",
+                              "fontFamily": "$font-mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ulUNN",
+                          "name": "Terminal / remote",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "p7tLcr",
+                              "name": "Terminal / remote Key",
+                              "fill": "$muted",
+                              "content": "\"remote\":",
+                              "fontFamily": "$font-mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ucwO8",
+                              "name": "Terminal / remote Value",
+                              "fill": "$accent-pink",
+                              "content": "\"Worldwide\"",
+                              "fontFamily": "$font-mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "pRtWk",
+                      "name": "Terminal / Skills Command",
+                      "fill": "$accent-orange",
+                      "content": "~/portfolio  ›  ls ./skills",
+                      "fontFamily": "$font-mono",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hl5yT",
+                      "name": "Terminal / Skill Rows",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "gS1Hm",
+                          "name": "Terminal / Skill Row 1",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "nsqdM",
+                              "name": "Terminal / Skill n8n",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "RiunK",
+                                  "name": "Terminal / Skill n8n Label",
+                                  "fill": "$accent-orange",
+                                  "content": "n8n",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "mCBkf",
+                              "name": "Terminal / Skill LLM workflows",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "m5UADr",
+                                  "name": "Terminal / Skill LLM workflows Label",
+                                  "fill": "$accent-orange",
+                                  "content": "LLM workflows",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "pbcEW",
+                              "name": "Terminal / Skill AI agents",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "g1LCD",
+                                  "name": "Terminal / Skill AI agents Label",
+                                  "fill": "$accent-orange",
+                                  "content": "AI agents",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MYg6h",
+                          "name": "Terminal / Skill Row 2",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "T5BUf",
+                              "name": "Terminal / Skill .NET/C#",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "N16LSO",
+                                  "name": "Terminal / Skill .NET/C# Label",
+                                  "fill": "$accent-orange",
+                                  "content": ".NET/C#",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "u2e0p",
+                              "name": "Terminal / Skill ASP.NET Core",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "HaFDN",
+                                  "name": "Terminal / Skill ASP.NET Core Label",
+                                  "fill": "$accent-orange",
+                                  "content": "ASP.NET Core",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "b1qt7",
+                              "name": "Terminal / Skill Python",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "aTmc8",
+                                  "name": "Terminal / Skill Python Label",
+                                  "fill": "$accent-orange",
+                                  "content": "Python",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "aoHgT",
+                          "name": "Terminal / Skill Row 3",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "fyKxz",
+                              "name": "Terminal / Skill REST APIs",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "btgbI",
+                                  "name": "Terminal / Skill REST APIs Label",
+                                  "fill": "$accent-orange",
+                                  "content": "REST APIs",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ad8gu",
+                              "name": "Terminal / Skill SQL",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "M79Yf",
+                                  "name": "Terminal / Skill SQL Label",
+                                  "fill": "$accent-orange",
+                                  "content": "SQL",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ndl7y",
+                              "name": "Terminal / Skill Azure",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "g9HHv",
+                                  "name": "Terminal / Skill Azure Label",
+                                  "fill": "$accent-orange",
+                                  "content": "Azure",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lwnqv",
+                              "name": "Terminal / Skill AWS",
+                              "fill": "#FF74330D",
+                              "cornerRadius": 5,
+                              "stroke": "#FF743355",
+                              "strokeWidth": 1,
+                              "padding": [
+                                7,
+                                9
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "vAYiq",
+                                  "name": "Terminal / Skill AWS Label",
+                                  "fill": "$accent-orange",
+                                  "content": "AWS",
+                                  "fontFamily": "$font-mono",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "obC82",
+                      "name": "Terminal / Status Command",
+                      "fill": "$accent-orange",
+                      "content": "~/portfolio  ›  echo $FOCUS",
+                      "fontFamily": "$font-mono",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "naEbp",
+                      "name": "Terminal / Status Value",
+                      "fill": "$accent-pink",
+                      "content": "AI solutions · automation · integrations",
+                      "fontFamily": "$font-mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
                 }
               ]
             }
