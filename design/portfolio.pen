@@ -1378,7 +1378,7 @@
           "id": "SAZ0d",
           "name": "04 / Skills",
           "width": "fill_container",
-          "height": 1120,
+          "height": 1050,
           "stroke": "$border",
           "strokeWidth": {
             "bottom": 1
@@ -1406,14 +1406,14 @@
               "id": "l9Mlo3",
               "name": "Skills / Card Grid",
               "width": "fill_container",
-              "layout": "vertical",
               "gap": 20,
               "children": [
                 {
                   "type": "frame",
-                  "id": "onz2n",
-                  "name": "Skills / Row 1",
+                  "id": "wV02m",
+                  "name": "Skills / Left Column",
                   "width": "fill_container",
+                  "layout": "vertical",
                   "gap": 20,
                   "children": [
                     {
@@ -1421,10 +1421,49 @@
                       "id": "fW9U7",
                       "name": "Skill Category / AI & Automation",
                       "width": "fill_container",
-                      "fill": "#151111",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 135,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#2A171FCC",
+                            "position": 0
+                          },
+                          {
+                            "color": "#171316D9",
+                            "position": 0.48
+                          },
+                          {
+                            "color": "#24151CCC",
+                            "position": 1
+                          }
+                        ]
+                      },
                       "cornerRadius": 14,
-                      "stroke": "#332929",
+                      "stroke": "#493039",
                       "strokeWidth": 1,
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 18
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#00000066",
+                          "offset": {
+                            "x": 0,
+                            "y": 8
+                          },
+                          "blur": 24,
+                          "spread": -10
+                        }
+                      ],
                       "layout": "vertical",
                       "gap": 18,
                       "padding": 30,
@@ -1505,10 +1544,43 @@
                                   "type": "frame",
                                   "id": "FB9jb",
                                   "name": "Skill Tag / n8n",
-                                  "fill": "#1B1616",
+                                  "fill": {
+                                    "type": "gradient",
+                                    "gradientType": "linear",
+                                    "enabled": true,
+                                    "rotation": 270,
+                                    "size": {
+                                      "height": 1
+                                    },
+                                    "colors": [
+                                      {
+                                        "color": "$accent-red",
+                                        "position": 0
+                                      },
+                                      {
+                                        "color": "$accent-orange",
+                                        "position": 0.55
+                                      },
+                                      {
+                                        "color": "$accent-pink",
+                                        "position": 1
+                                      }
+                                    ]
+                                  },
                                   "cornerRadius": 6,
-                                  "stroke": "#3D3030",
+                                  "stroke": "#FF765F",
                                   "strokeWidth": 1,
+                                  "effect": {
+                                    "type": "shadow",
+                                    "shadowType": "outer",
+                                    "color": "#FF334E66",
+                                    "offset": {
+                                      "x": 0,
+                                      "y": 5
+                                    },
+                                    "blur": 16,
+                                    "spread": -5
+                                  },
                                   "padding": [
                                     9,
                                     13
@@ -1519,11 +1591,11 @@
                                       "type": "text",
                                       "id": "SdpuI",
                                       "name": "Skill Tag Label / n8n",
-                                      "fill": "$muted",
+                                      "fill": "#FFFFFF",
                                       "content": "n8n",
                                       "fontFamily": "$font-mono",
                                       "fontSize": 13,
-                                      "fontWeight": "500"
+                                      "fontWeight": "650"
                                     }
                                   ]
                                 },
@@ -1590,32 +1662,6 @@
                               "children": [
                                 {
                                   "type": "frame",
-                                  "id": "KY95s",
-                                  "name": "Skill Tag / AI agents fundamentals",
-                                  "fill": "#1B1616",
-                                  "cornerRadius": 6,
-                                  "stroke": "#3D3030",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    9,
-                                    13
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "X4FsRK",
-                                      "name": "Skill Tag Label / AI agents fundamentals",
-                                      "fill": "$muted",
-                                      "content": "AI agents fundamentals",
-                                      "fontFamily": "$font-mono",
-                                      "fontSize": 13,
-                                      "fontWeight": "500"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
                                   "id": "M9y0O",
                                   "name": "Skill Tag / RAG fundamentals",
                                   "fill": "#1B1616",
@@ -1639,19 +1685,10 @@
                                       "fontWeight": "500"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "frame",
-                              "id": "g0bfIk",
-                              "name": "Skill Tag Row / AI & Automation",
-                              "width": "fill_container",
-                              "gap": 10,
-                              "children": [
+                                },
                                 {
                                   "type": "frame",
-                                  "id": "CAQ8O",
+                                  "id": "GrQDl",
                                   "name": "Skill Tag / Workflow automation",
                                   "fill": "#1B1616",
                                   "cornerRadius": 6,
@@ -1665,7 +1702,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "id": "YiYjM",
+                                      "id": "Awv1w",
                                       "name": "Skill Tag Label / Workflow automation",
                                       "fill": "$muted",
                                       "content": "Workflow automation",
@@ -1677,7 +1714,7 @@
                                 },
                                 {
                                   "type": "frame",
-                                  "id": "fWYaq",
+                                  "id": "DdOyX",
                                   "name": "Skill Tag / Human-in-the-loop",
                                   "fill": "#1B1616",
                                   "cornerRadius": 6,
@@ -1691,7 +1728,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "id": "XAQa7",
+                                      "id": "QCFKu",
                                       "name": "Skill Tag Label / Human-in-the-loop",
                                       "fill": "$muted",
                                       "content": "Human-in-the-loop",
@@ -1710,32 +1747,6 @@
                               "width": "fill_container",
                               "gap": 10,
                               "children": [
-                                {
-                                  "type": "frame",
-                                  "id": "At9LZ",
-                                  "name": "Skill Tag / Error handling",
-                                  "fill": "#1B1616",
-                                  "cornerRadius": 6,
-                                  "stroke": "#3D3030",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    9,
-                                    13
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "NZXNT",
-                                      "name": "Skill Tag Label / Error handling",
-                                      "fill": "$muted",
-                                      "content": "Error handling",
-                                      "fontFamily": "$font-mono",
-                                      "fontSize": 13,
-                                      "fontWeight": "500"
-                                    }
-                                  ]
-                                },
                                 {
                                   "type": "frame",
                                   "id": "PgATA",
@@ -1815,101 +1826,18 @@
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "KVDtO",
-                      "name": "Skill Category / Backend",
-                      "width": "fill_container",
-                      "height": 302,
-                      "fill": "#151111",
-                      "cornerRadius": 14,
-                      "stroke": "#332929",
-                      "strokeWidth": 1,
-                      "layout": "vertical",
-                      "gap": 18,
-                      "padding": 30,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "wOEL1",
-                          "name": "Skill Category Title / Backend",
-                          "fill": "$text",
-                          "content": "Programming & Web",
-                          "fontFamily": "$font-heading",
-                          "fontSize": 27,
-                          "fontWeight": "650"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "N1G41V",
-                          "name": "Skill Category Divider / Backend",
-                          "width": "fill_container",
-                          "height": 2,
-                          "children": [
-                            {
-                              "type": "rectangle",
-                              "id": "nV4di",
-                              "name": "Skill Category Accent / Backend",
-                              "fill": {
-                                "type": "gradient",
-                                "gradientType": "linear",
-                                "enabled": true,
-                                "rotation": 270,
-                                "size": {
-                                  "height": 1
-                                },
-                                "colors": [
-                                  {
-                                    "color": "$accent-red",
-                                    "position": 0
-                                  },
-                                  {
-                                    "color": "$accent-orange",
-                                    "position": 0.55
-                                  },
-                                  {
-                                    "color": "$accent-pink",
-                                    "position": 1
-                                  }
-                                ]
-                              },
-                              "width": 68,
-                              "height": 2
                             },
                             {
-                              "type": "rectangle",
-                              "id": "RXs9t",
-                              "name": "Skill Category Line / Backend",
-                              "fill": "#332929",
-                              "width": "fill_container",
-                              "height": 1
-                            }
-                          ]
-                        },
-                        {
-                          "type": "frame",
-                          "id": "xa6Au",
-                          "name": "Skill Tags / Backend",
-                          "width": "fill_container",
-                          "layout": "vertical",
-                          "gap": 10,
-                          "children": [
-                            {
                               "type": "frame",
-                              "id": "Y1ZIRQ",
-                              "name": "Skill Tag Row / Backend",
+                              "id": "EmHHE",
+                              "name": "Skill Tag Row / AI & Automation",
                               "width": "fill_container",
                               "gap": 10,
                               "children": [
                                 {
                                   "type": "frame",
-                                  "id": "WDu0O",
-                                  "name": "Skill Tag / .NET/C#",
+                                  "id": "yvMLK",
+                                  "name": "Skill Tag / AI agents fundamentals",
                                   "fill": "#1B1616",
                                   "cornerRadius": 6,
                                   "stroke": "#3D3030",
@@ -1922,10 +1850,10 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "id": "u8gwqr",
-                                      "name": "Skill Tag Label / .NET/C#",
+                                      "id": "C0t9g5",
+                                      "name": "Skill Tag Label / AI agents fundamentals",
                                       "fill": "$muted",
-                                      "content": ".NET/C#",
+                                      "content": "AI agents fundamentals",
                                       "fontFamily": "$font-mono",
                                       "fontSize": 13,
                                       "fontWeight": "500"
@@ -1934,8 +1862,8 @@
                                 },
                                 {
                                   "type": "frame",
-                                  "id": "J0Qoq",
-                                  "name": "Skill Tag / Python",
+                                  "id": "At9LZ",
+                                  "name": "Skill Tag / Error handling",
                                   "fill": "#1B1616",
                                   "cornerRadius": 6,
                                   "stroke": "#3D3030",
@@ -1948,114 +1876,10 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "id": "AOtGH",
-                                      "name": "Skill Tag Label / Python",
+                                      "id": "NZXNT",
+                                      "name": "Skill Tag Label / Error handling",
                                       "fill": "$muted",
-                                      "content": "Python",
-                                      "fontFamily": "$font-mono",
-                                      "fontSize": 13,
-                                      "fontWeight": "500"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "f9juaO",
-                                  "name": "Skill Tag / JavaScript",
-                                  "fill": "#1B1616",
-                                  "cornerRadius": 6,
-                                  "stroke": "#3D3030",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    9,
-                                    13
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "t1PUFH",
-                                      "name": "Skill Tag Label / JavaScript",
-                                      "fill": "$muted",
-                                      "content": "JavaScript",
-                                      "fontFamily": "$font-mono",
-                                      "fontSize": 13,
-                                      "fontWeight": "500"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "V4amCE",
-                                  "name": "Skill Tag / JavaScript",
-                                  "fill": "#1B1616",
-                                  "cornerRadius": 6,
-                                  "stroke": "#3D3030",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    9,
-                                    13
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "yXKj2",
-                                      "name": "Skill Tag Label / JavaScript",
-                                      "fill": "$muted",
-                                      "content": "SQL",
-                                      "fontFamily": "$font-mono",
-                                      "fontSize": 13,
-                                      "fontWeight": "500"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "JUGmi",
-                                  "name": "Skill Tag / JavaScript",
-                                  "fill": "#1B1616",
-                                  "cornerRadius": 6,
-                                  "stroke": "#3D3030",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    9,
-                                    13
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "I1XTq7",
-                                      "name": "Skill Tag Label / JavaScript",
-                                      "fill": "$muted",
-                                      "content": "HTML",
-                                      "fontFamily": "$font-mono",
-                                      "fontSize": 13,
-                                      "fontWeight": "500"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "lOngG",
-                                  "name": "Skill Tag / JavaScript",
-                                  "fill": "#1B1616",
-                                  "cornerRadius": 6,
-                                  "stroke": "#3D3030",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    9,
-                                    13
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "w0BQUA",
-                                      "name": "Skill Tag Label / JavaScript",
-                                      "fill": "$muted",
-                                      "content": "CSS",
+                                      "content": "Error handling",
                                       "fontFamily": "$font-mono",
                                       "fontSize": 13,
                                       "fontWeight": "500"
@@ -2067,25 +1891,55 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "Rgppp",
-                  "name": "Skills / Row 2",
-                  "width": "fill_container",
-                  "gap": 20,
-                  "children": [
+                    },
                     {
                       "type": "frame",
                       "id": "w60J79",
                       "name": "Skill Category / APIs & Integrations",
                       "width": "fill_container",
-                      "fill": "#151111",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 135,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#121212EB",
+                            "position": 0
+                          },
+                          {
+                            "color": "#191616E3",
+                            "position": 0.52
+                          },
+                          {
+                            "color": "#101010EB",
+                            "position": 1
+                          }
+                        ]
+                      },
                       "cornerRadius": 14,
-                      "stroke": "#332929",
+                      "stroke": "#302A2A",
                       "strokeWidth": 1,
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 18
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#00000070",
+                          "offset": {
+                            "x": 0,
+                            "y": 8
+                          },
+                          "blur": 24,
+                          "spread": -10
+                        }
+                      ],
                       "layout": "vertical",
                       "gap": 18,
                       "padding": 30,
@@ -2303,10 +2157,49 @@
                       "id": "NYQqm",
                       "name": "Skill Category / Databases",
                       "width": "fill_container",
-                      "fill": "#151111",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 135,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#121212EB",
+                            "position": 0
+                          },
+                          {
+                            "color": "#191616E3",
+                            "position": 0.52
+                          },
+                          {
+                            "color": "#101010EB",
+                            "position": 1
+                          }
+                        ]
+                      },
                       "cornerRadius": 14,
-                      "stroke": "#332929",
+                      "stroke": "#302A2A",
                       "strokeWidth": 1,
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 18
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#00000070",
+                          "offset": {
+                            "x": 0,
+                            "y": 8
+                          },
+                          "blur": 24,
+                          "spread": -10
+                        }
+                      ],
                       "layout": "vertical",
                       "gap": 18,
                       "padding": 30,
@@ -2549,21 +2442,346 @@
                 },
                 {
                   "type": "frame",
-                  "id": "Uj2i8",
-                  "name": "Skills / Row 3",
+                  "id": "xmiSu",
+                  "name": "Skills / Right Column",
                   "width": "fill_container",
+                  "layout": "vertical",
                   "gap": 20,
                   "children": [
+                    {
+                      "type": "frame",
+                      "id": "KVDtO",
+                      "name": "Skill Category / Backend",
+                      "width": "fill_container",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 135,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#121212EB",
+                            "position": 0
+                          },
+                          {
+                            "color": "#191616E3",
+                            "position": 0.52
+                          },
+                          {
+                            "color": "#101010EB",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 14,
+                      "stroke": "#302A2A",
+                      "strokeWidth": 1,
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 18
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#00000070",
+                          "offset": {
+                            "x": 0,
+                            "y": 8
+                          },
+                          "blur": 24,
+                          "spread": -10
+                        }
+                      ],
+                      "layout": "vertical",
+                      "gap": 18,
+                      "padding": 30,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wOEL1",
+                          "name": "Skill Category Title / Backend",
+                          "fill": "$text",
+                          "content": "Programming & Web",
+                          "fontFamily": "$font-heading",
+                          "fontSize": 27,
+                          "fontWeight": "650"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "N1G41V",
+                          "name": "Skill Category Divider / Backend",
+                          "width": "fill_container",
+                          "height": 2,
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "id": "nV4di",
+                              "name": "Skill Category Accent / Backend",
+                              "fill": {
+                                "type": "gradient",
+                                "gradientType": "linear",
+                                "enabled": true,
+                                "rotation": 270,
+                                "size": {
+                                  "height": 1
+                                },
+                                "colors": [
+                                  {
+                                    "color": "$accent-red",
+                                    "position": 0
+                                  },
+                                  {
+                                    "color": "$accent-orange",
+                                    "position": 0.55
+                                  },
+                                  {
+                                    "color": "$accent-pink",
+                                    "position": 1
+                                  }
+                                ]
+                              },
+                              "width": 68,
+                              "height": 2
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "RXs9t",
+                              "name": "Skill Category Line / Backend",
+                              "fill": "#332929",
+                              "width": "fill_container",
+                              "height": 1
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "xa6Au",
+                          "name": "Skill Tags / Backend",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Y1ZIRQ",
+                              "name": "Skill Tag Row / Backend",
+                              "width": "fill_container",
+                              "gap": 10,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "WDu0O",
+                                  "name": "Skill Tag / .NET/C#",
+                                  "fill": "#1B1616",
+                                  "cornerRadius": 6,
+                                  "stroke": "#3D3030",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    9,
+                                    13
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "u8gwqr",
+                                      "name": "Skill Tag Label / .NET/C#",
+                                      "fill": "$muted",
+                                      "content": ".NET/C#",
+                                      "fontFamily": "$font-mono",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "J0Qoq",
+                                  "name": "Skill Tag / Python",
+                                  "fill": "#1B1616",
+                                  "cornerRadius": 6,
+                                  "stroke": "#3D3030",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    9,
+                                    13
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "AOtGH",
+                                      "name": "Skill Tag Label / Python",
+                                      "fill": "$muted",
+                                      "content": "Python",
+                                      "fontFamily": "$font-mono",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "f9juaO",
+                                  "name": "Skill Tag / JavaScript",
+                                  "fill": "#1B1616",
+                                  "cornerRadius": 6,
+                                  "stroke": "#3D3030",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    9,
+                                    13
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "t1PUFH",
+                                      "name": "Skill Tag Label / JavaScript",
+                                      "fill": "$muted",
+                                      "content": "JavaScript",
+                                      "fontFamily": "$font-mono",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "V4amCE",
+                                  "name": "Skill Tag / JavaScript",
+                                  "fill": "#1B1616",
+                                  "cornerRadius": 6,
+                                  "stroke": "#3D3030",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    9,
+                                    13
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "yXKj2",
+                                      "name": "Skill Tag Label / JavaScript",
+                                      "fill": "$muted",
+                                      "content": "SQL",
+                                      "fontFamily": "$font-mono",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "JUGmi",
+                                  "name": "Skill Tag / JavaScript",
+                                  "fill": "#1B1616",
+                                  "cornerRadius": 6,
+                                  "stroke": "#3D3030",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    9,
+                                    13
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "I1XTq7",
+                                      "name": "Skill Tag Label / JavaScript",
+                                      "fill": "$muted",
+                                      "content": "HTML",
+                                      "fontFamily": "$font-mono",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "lOngG",
+                                  "name": "Skill Tag / JavaScript",
+                                  "fill": "#1B1616",
+                                  "cornerRadius": 6,
+                                  "stroke": "#3D3030",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    9,
+                                    13
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "w0BQUA",
+                                      "name": "Skill Tag Label / JavaScript",
+                                      "fill": "$muted",
+                                      "content": "CSS",
+                                      "fontFamily": "$font-mono",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "frame",
                       "id": "iWISJ",
                       "name": "Skill Category / Cloud & Infrastructure",
                       "width": "fill_container",
-                      "height": 257,
-                      "fill": "#151111",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 135,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#121212EB",
+                            "position": 0
+                          },
+                          {
+                            "color": "#191616E3",
+                            "position": 0.52
+                          },
+                          {
+                            "color": "#101010EB",
+                            "position": 1
+                          }
+                        ]
+                      },
                       "cornerRadius": 14,
-                      "stroke": "#332929",
+                      "stroke": "#302A2A",
                       "strokeWidth": 1,
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 18
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#00000070",
+                          "offset": {
+                            "x": 0,
+                            "y": 8
+                          },
+                          "blur": 24,
+                          "spread": -10
+                        }
+                      ],
                       "layout": "vertical",
                       "gap": 18,
                       "padding": 30,
@@ -2769,58 +2987,6 @@
                                       "fontWeight": "500"
                                     }
                                   ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "tjfLK",
-                                  "name": "Skill Tag / GitHub",
-                                  "fill": "#1B1616",
-                                  "cornerRadius": 6,
-                                  "stroke": "#3D3030",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    9,
-                                    13
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "NcNU0",
-                                      "name": "Skill Tag Label / GitHub",
-                                      "fill": "$muted",
-                                      "content": "Visual Studio",
-                                      "fontFamily": "$font-mono",
-                                      "fontSize": 13,
-                                      "fontWeight": "500"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "frame",
-                                  "id": "zJwnJ",
-                                  "name": "Skill Tag / GitHub",
-                                  "fill": "#1B1616",
-                                  "cornerRadius": 6,
-                                  "stroke": "#3D3030",
-                                  "strokeWidth": 1,
-                                  "padding": [
-                                    9,
-                                    13
-                                  ],
-                                  "alignItems": "center",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "id": "w44mtt",
-                                      "name": "Skill Tag Label / GitHub",
-                                      "fill": "$muted",
-                                      "content": "VS Code",
-                                      "fontFamily": "$font-mono",
-                                      "fontSize": 13,
-                                      "fontWeight": "500"
-                                    }
-                                  ]
                                 }
                               ]
                             }
@@ -2912,7 +3078,59 @@
                                       "id": "cg5wy",
                                       "name": "Skill Tag Label / Cursor",
                                       "fill": "$muted",
-                                      "content": "V",
+                                      "content": "Vercel",
+                                      "fontFamily": "$font-mono",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "tjfLK",
+                                  "name": "Skill Tag / GitHub",
+                                  "fill": "#1B1616",
+                                  "cornerRadius": 6,
+                                  "stroke": "#3D3030",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    9,
+                                    13
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "NcNU0",
+                                      "name": "Skill Tag Label / GitHub",
+                                      "fill": "$muted",
+                                      "content": "Visual Studio",
+                                      "fontFamily": "$font-mono",
+                                      "fontSize": 13,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "zJwnJ",
+                                  "name": "Skill Tag / GitHub",
+                                  "fill": "#1B1616",
+                                  "cornerRadius": 6,
+                                  "stroke": "#3D3030",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    9,
+                                    13
+                                  ],
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "w44mtt",
+                                      "name": "Skill Tag Label / GitHub",
+                                      "fill": "$muted",
+                                      "content": "VS Code",
                                       "fontFamily": "$font-mono",
                                       "fontSize": 13,
                                       "fontWeight": "500"
@@ -2930,10 +3148,49 @@
                       "id": "K1YdWt",
                       "name": "Skill Category / Tools",
                       "width": "fill_container",
-                      "fill": "#151111",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 135,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#121212EB",
+                            "position": 0
+                          },
+                          {
+                            "color": "#191616E3",
+                            "position": 0.52
+                          },
+                          {
+                            "color": "#101010EB",
+                            "position": 1
+                          }
+                        ]
+                      },
                       "cornerRadius": 14,
-                      "stroke": "#332929",
+                      "stroke": "#302A2A",
                       "strokeWidth": 1,
+                      "effect": [
+                        {
+                          "type": "background_blur",
+                          "radius": 18
+                        },
+                        {
+                          "type": "shadow",
+                          "shadowType": "outer",
+                          "color": "#00000070",
+                          "offset": {
+                            "x": 0,
+                            "y": 8
+                          },
+                          "blur": 24,
+                          "spread": -10
+                        }
+                      ],
                       "layout": "vertical",
                       "gap": 18,
                       "padding": 30,
