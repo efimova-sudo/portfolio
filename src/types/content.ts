@@ -9,7 +9,12 @@ export type Profile = {
   professionalTitle: "AI Solutions & Automation Engineer";
   shortPositioning: string;
   about: string;
+  aboutParagraphs?: string[];
   yearsCommercialExperience: 6;
+  technologyCount?: number;
+  deliveryScope?: string;
+  location?: string;
+  remoteAvailability?: string;
   photo?: {
     src: string;
     alt: string;
@@ -31,6 +36,7 @@ export type SkillCategory = {
   id: string;
   title: string;
   skills: Skill[];
+  featured?: boolean;
 };
 
 export type Project = {
