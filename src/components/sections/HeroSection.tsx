@@ -32,7 +32,7 @@ export function HeroSection() {
           <div className="social-links">
             {contacts.filter((contact) => contact.label in socialIcons).map((contact) => {
               const icon = socialIcons[contact.label as keyof typeof socialIcons];
-              return contact.href ? <a aria-label={contact.label} className="social-link" href={contact.href} key={contact.label}><Icon name={icon} size={19} /></a> : <span aria-label={`${contact.label} link pending`} className="social-link is-disabled" key={contact.label}><Icon name={icon} size={19} /></span>;
+              return contact.href ? <a aria-label={contact.label} className="social-link" href={contact.href} key={contact.label} rel={contact.external ? "noreferrer" : undefined} target={contact.external ? "_blank" : undefined}><Icon name={icon} size={19} /></a> : <span aria-label={`${contact.label} link pending`} className="social-link is-disabled" key={contact.label}><Icon name={icon} size={19} /></span>;
             })}
           </div>
         </div>

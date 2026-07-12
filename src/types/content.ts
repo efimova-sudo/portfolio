@@ -1,6 +1,7 @@
 export type Link = {
   label: string;
   href?: string;
+  value?: string;
   external?: boolean;
 };
 

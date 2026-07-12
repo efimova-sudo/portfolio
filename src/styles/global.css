@@ -784,6 +784,7 @@ h3 {
 .contact-section > h2 {
   width: fit-content;
   margin-bottom: 26px;
+  padding-bottom: 0.08em;
   background: linear-gradient(90deg, var(--accent-pink), var(--accent-orange), var(--text));
   background-clip: text;
   -webkit-background-clip: text;
@@ -791,6 +792,7 @@ h3 {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 4.7vw, 4.25rem);
   font-weight: 700;
+  line-height: 1.1;
 }
 
 .contact-panels {
