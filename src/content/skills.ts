@@ -4,7 +4,6 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "ai-automation",
     title: "AI & Automation",
-    featured: true,
     skills: [
       { name: "n8n" },
       { name: "LLM workflows" },

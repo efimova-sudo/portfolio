@@ -37,7 +37,6 @@ export type SkillCategory = {
   id: string;
   title: string;
   skills: Skill[];
-  featured?: boolean;
 };
 
 export type Project = {

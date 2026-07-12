@@ -10,12 +10,12 @@ export function SkillsSection() {
       <div className="skills-columns">
         {columns.map((categories, columnIndex) => <div className="skills-column" key={columnIndex}>
           {categories.map((category) => (
-            <article className={`skill-card${category.featured ? " skill-card-featured" : ""}`} key={category.id}>
+            <article className="skill-card" key={category.id}>
               <h3>{category.title}</h3>
               <span aria-hidden="true" className="skill-card-divider" />
               <ul className="tag-list">
                 {category.skills.map((skill) => (
-                  <li className={category.featured && skill.name === "n8n" ? "skill-tag-hover" : undefined} key={skill.name}>
+                  <li key={skill.name}>
                     {skill.name}
                   </li>
                 ))}
