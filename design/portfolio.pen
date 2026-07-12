@@ -1053,6 +1053,328 @@
         },
         {
           "type": "frame",
+          "id": "u7BA9",
+          "name": "About",
+          "width": "fill_container",
+          "height": 1180,
+          "stroke": "$border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "layout": "vertical",
+          "gap": 54,
+          "padding": [
+            88,
+            80
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "ehCNL",
+              "name": "About / Title",
+              "fill": "$text",
+              "content": "About Me",
+              "fontFamily": "$font-heading",
+              "fontSize": 68,
+              "fontWeight": "700",
+              "letterSpacing": -2
+            },
+            {
+              "type": "frame",
+              "id": "Z7t1R",
+              "name": "About / Content",
+              "width": "fill_container",
+              "height": 500,
+              "gap": 80,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "UjDvF",
+                  "name": "About / Photo Placeholder",
+                  "width": 420,
+                  "height": 500,
+                  "fill": [
+                    "$surface",
+                    {
+                      "type": "image",
+                      "enabled": true,
+                      "url": "../IMG_2989_VSCO.JPG",
+                      "mode": "fill"
+                    }
+                  ],
+                  "cornerRadius": 18,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center"
+                },
+                {
+                  "type": "frame",
+                  "id": "N8J1v8",
+                  "name": "About / Copy",
+                  "width": "fill_container",
+                  "height": 500,
+                  "layout": "vertical",
+                  "gap": 28,
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IzjnD",
+                      "name": "About / Paragraph 1",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "I design and build AI-powered systems that automate business operations, connect existing tools, and turn complex processes into reliable workflows.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "$font-body",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "s9F5a",
+                      "name": "About / Paragraph 2",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Coming from a 6-year background in backend software engineering (.NET/C#), I approach automation like software development—not as isolated workflows, but as maintainable systems. I prioritize clean architecture, reusable components, API-first integrations, robust error handling, and clear documentation.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "$font-body",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "c0JGE",
+                      "name": "About / Paragraph 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "My current focus is on AI agents, LLM workflows, API integrations, and workflow orchestration. Whether it's automating operations, building internal AI tools, or integrating language models into existing products, I enjoy solving real business problems with practical engineering.",
+                      "lineHeight": 1.6,
+                      "fontFamily": "$font-body",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "RQGVZ",
+                      "name": "About / Location",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "G8JOno",
+                          "name": "About / Location Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "map-pin",
+                          "library": "lucide",
+                          "fill": "$accent-orange"
+                        },
+                        {
+                          "type": "text",
+                          "id": "erHVf",
+                          "name": "About / Location Text",
+                          "fill": "$muted",
+                          "content": "Mexico · Worldwide Remote",
+                          "fontFamily": "$font-mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "j4gNAL",
+              "name": "About / Stats Row",
+              "width": "fill_container",
+              "gap": 80,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ULbjF",
+                  "name": "About / Experience Stat",
+                  "width": 220,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jBPRY",
+                      "name": "About / Experience Number",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 270,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "$accent-red",
+                            "position": 0
+                          },
+                          {
+                            "color": "$accent-orange",
+                            "position": 0.55
+                          },
+                          {
+                            "color": "$accent-pink",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "content": "6+",
+                      "lineHeight": 0.9,
+                      "fontFamily": "$font-heading",
+                      "fontSize": 104,
+                      "fontWeight": "700",
+                      "letterSpacing": -3
+                    },
+                    {
+                      "type": "text",
+                      "id": "Sq5hO",
+                      "name": "About / Experience Label",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "YEARS\nDEVELOPING",
+                      "lineHeight": 1.25,
+                      "fontFamily": "$font-mono",
+                      "fontSize": 17,
+                      "fontWeight": "500",
+                      "letterSpacing": 0.8
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tbjc2",
+                  "name": "About / Technologies Stat",
+                  "width": 220,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "w2i88H",
+                      "name": "About / Technologies Number",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 270,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#FF334E",
+                            "position": 0
+                          },
+                          {
+                            "color": "#FF7433",
+                            "position": 0.55
+                          },
+                          {
+                            "color": "#FF3CA6",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "content": "20+",
+                      "lineHeight": 0.9,
+                      "fontFamily": "Funnel Sans",
+                      "fontSize": 104,
+                      "fontWeight": "700",
+                      "letterSpacing": -3
+                    },
+                    {
+                      "type": "text",
+                      "id": "ArlRe",
+                      "name": "About / Technologies Label",
+                      "fill": "#AAA0A0",
+                      "content": "TECHNOLOGIES\nIN STACK",
+                      "lineHeight": 1.25,
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 17,
+                      "fontWeight": "500",
+                      "letterSpacing": 0.8
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ik0qQ",
+                  "name": "About / Technologies Stat",
+                  "width": 300,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xV57n",
+                      "name": "About / Technologies Number",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 270,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#FF334E",
+                            "position": 0
+                          },
+                          {
+                            "color": "#FF7433",
+                            "position": 0.55
+                          },
+                          {
+                            "color": "#FF3CA6",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "content": "End-to-End\nSolutions",
+                      "lineHeight": 0.9,
+                      "fontFamily": "Funnel Sans",
+                      "fontSize": 60,
+                      "fontWeight": "700",
+                      "letterSpacing": -3
+                    },
+                    {
+                      "type": "text",
+                      "id": "b5Uol8",
+                      "name": "About / Technologies Label",
+                      "fill": "#AAA0A0",
+                      "content": "FROM IDEA\nTO DEPLOYMENT",
+                      "lineHeight": 1.25,
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 17,
+                      "fontWeight": "500",
+                      "letterSpacing": 0.8
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
           "id": "y2TdxK",
           "name": "02 / What I Do",
           "width": "fill_container",
@@ -1067,17 +1389,6 @@
             80
           ],
           "children": [
-            {
-              "type": "text",
-              "id": "PRyeg",
-              "name": "What I Do / Eyebrow",
-              "fill": "$accent-orange",
-              "content": "CAPABILITIES",
-              "fontFamily": "$font-mono",
-              "fontSize": 13,
-              "fontWeight": "600",
-              "letterSpacing": 1.4
-            },
             {
               "type": "text",
               "id": "Xw7KV",
@@ -1339,17 +1650,6 @@
               "children": [
                 {
                   "type": "text",
-                  "id": "iaeyA",
-                  "name": "About / Eyebrow",
-                  "fill": "$accent-orange",
-                  "content": "ENGINEERING FOUNDATION",
-                  "fontFamily": "$font-mono",
-                  "fontSize": 13,
-                  "fontWeight": "600",
-                  "letterSpacing": 1.4
-                },
-                {
-                  "type": "text",
                   "id": "torqO",
                   "name": "About / Title",
                   "fill": "$text",
@@ -1437,17 +1737,6 @@
             80
           ],
           "children": [
-            {
-              "type": "text",
-              "id": "R7h3wN",
-              "name": "Skills / Eyebrow",
-              "fill": "$accent-orange",
-              "content": "TECHNICAL MAP",
-              "fontFamily": "$font-mono",
-              "fontSize": 13,
-              "fontWeight": "600",
-              "letterSpacing": 1.4
-            },
             {
               "type": "text",
               "id": "s5kJl",
@@ -1745,17 +2034,6 @@
           "children": [
             {
               "type": "text",
-              "id": "Clw8d",
-              "name": "Projects / Eyebrow",
-              "fill": "$accent-orange",
-              "content": "SELECTED SYSTEMS",
-              "fontFamily": "$font-mono",
-              "fontSize": 13,
-              "fontWeight": "600",
-              "letterSpacing": 1.4
-            },
-            {
-              "type": "text",
               "id": "R24ZBK",
               "name": "Projects / Title",
               "fill": "$text",
@@ -1840,17 +2118,6 @@
             80
           ],
           "children": [
-            {
-              "type": "text",
-              "id": "FSYDS",
-              "name": "Previous Work / Eyebrow",
-              "fill": "$accent-orange",
-              "content": "ADDITIONAL WORK",
-              "fontFamily": "$font-mono",
-              "fontSize": 13,
-              "fontWeight": "600",
-              "letterSpacing": 1.4
-            },
             {
               "type": "text",
               "id": "isfFf",
