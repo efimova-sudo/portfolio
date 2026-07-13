@@ -8,9 +8,20 @@ import { ProjectsSection } from "../components/sections/ProjectsSection";
 import { SkillsSection } from "../components/sections/SkillsSection";
 import { SpotlightController } from "../components/ui/SpotlightController";
 import { ParticleDivider } from "../components/ui/ParticleDivider";
+import { ProjectDetailsPage } from "../components/pages/ProjectDetailsPage";
+import { projects } from "../content/projects";
 
 export function App() {
-  const content = (
+  const projectMatch = window.location.pathname.match(/^\/projects\/([^/]+)\/?$/);
+  const selectedProject = projectMatch ? projects.find((project) => project.slug === decodeURIComponent(projectMatch[1])) : undefined;
+  const content = projectMatch ? (
+    <>
+      <Header />
+      <SpotlightController />
+      <ProjectDetailsPage project={selectedProject} />
+      <Footer />
+    </>
+  ) : (
     <>
       <Header />
       <SpotlightController />

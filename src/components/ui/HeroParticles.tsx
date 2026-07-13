@@ -1,12 +1,16 @@
 import { useEffect, useRef } from "react";
 
-export function HeroParticles() {
+type HeroParticlesProps = {
+  obstacleSelector?: string;
+};
+
+export function HeroParticles({ obstacleSelector = ".hero-terminal-motion" }: HeroParticlesProps) {
   const fieldRef = useRef<HTMLDivElement>(null);
   const particleRefs = useRef<Array<HTMLElement | null>>([]);
 
   useEffect(() => {
     const field = fieldRef.current;
-    const terminal = field?.parentElement?.querySelector<HTMLElement>(".hero-terminal-motion");
+    const terminal = field?.parentElement?.querySelector<HTMLElement>(obstacleSelector);
     const elements = particleRefs.current.filter((element): element is HTMLElement => Boolean(element));
     if (!field || !terminal || !elements.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -95,7 +99,7 @@ export function HeroParticles() {
       cancelAnimationFrame(frame);
       resizeObserver.disconnect();
     };
-  }, []);
+  }, [obstacleSelector]);
 
   return (
     <div aria-hidden="true" className="hero-particles" ref={fieldRef}>
