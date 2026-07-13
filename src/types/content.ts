@@ -44,6 +44,7 @@ export type Project = {
   slug: string;
   title: string;
   shortDescription: string;
+  detailDescription?: string;
   problem: string;
   solution: string;
   role: string;
