@@ -8,17 +8,18 @@ type ScrollRevealProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
+  distance?: number;
   direction?: "left" | "right" | "up";
 };
 
-export function ScrollReveal({ children, className, delay = 0, direction = "up" }: ScrollRevealProps) {
+export function ScrollReveal({ children, className, delay = 0, distance = 34, direction = "up" }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const element = ref.current;
     if (!element || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const x = direction === "left" ? -34 : direction === "right" ? 34 : 0;
+    const x = direction === "left" ? -distance : direction === "right" ? distance : 0;
     const y = direction === "up" ? 28 : 0;
     const context = gsap.context(() => {
       gsap.fromTo(element, { autoAlpha: 0, x, y }, {
@@ -32,7 +33,7 @@ export function ScrollReveal({ children, className, delay = 0, direction = "up" 
       });
     }, element);
     return () => context.revert();
-  }, [delay, direction]);
+  }, [delay, direction, distance]);
 
   return <div className={className} ref={ref}>{children}</div>;
 }

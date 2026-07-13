@@ -1,6 +1,10 @@
 import { useEffect, useRef } from "react";
 
-export function ParticleDivider() {
+type ParticleDividerProps = {
+  collisionPadding?: number;
+};
+
+export function ParticleDivider({ collisionPadding = 0 }: ParticleDividerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const particleRefs = useRef<Array<HTMLElement | null>>([]);
 
@@ -25,8 +29,8 @@ export function ParticleDivider() {
         size,
         vx: Math.cos(angle) * speed,
         vy: Math.sin(angle) * speed,
-        x: random() * Math.max(1, bounds.width - size),
-        y: random() * Math.max(1, bounds.height - size),
+        x: collisionPadding + random() * Math.max(1, bounds.width - size - collisionPadding * 2),
+        y: collisionPadding + random() * Math.max(1, bounds.height - size - collisionPadding * 2),
         wobble: 0.35 + index * 0.035,
       };
     });
@@ -49,14 +53,16 @@ export function ParticleDivider() {
         particle.x += particle.vx * delta;
         particle.y += particle.vy * delta;
 
-        const maxX = Math.max(0, bounds.width - particle.size);
-        const maxY = Math.max(0, bounds.height - particle.size);
-        if (particle.x <= 0 || particle.x >= maxX) {
-          particle.x = Math.min(maxX, Math.max(0, particle.x));
+        const minX = collisionPadding;
+        const minY = collisionPadding;
+        const maxX = Math.max(minX, bounds.width - particle.size - collisionPadding);
+        const maxY = Math.max(minY, bounds.height - particle.size - collisionPadding);
+        if (particle.x <= minX || particle.x >= maxX) {
+          particle.x = Math.min(maxX, Math.max(minX, particle.x));
           particle.vx *= -1;
         }
-        if (particle.y <= 0 || particle.y >= maxY) {
-          particle.y = Math.min(maxY, Math.max(0, particle.y));
+        if (particle.y <= minY || particle.y >= maxY) {
+          particle.y = Math.min(maxY, Math.max(minY, particle.y));
           particle.vy *= -1;
         }
 
@@ -70,7 +76,7 @@ export function ParticleDivider() {
       cancelAnimationFrame(frame);
       resizeObserver.disconnect();
     };
-  }, []);
+  }, [collisionPadding]);
 
   return (
     <div aria-hidden="true" className="particle-divider" ref={containerRef}>
