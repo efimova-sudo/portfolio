@@ -1,9 +1,14 @@
-import mainImage from "../assets/projects/project-onboarding-automation/main-orchestration.png";
-import workspaceImage from "../assets/projects/project-onboarding-automation/sub-project-workspace.png";
-import quickBooksImage from "../assets/projects/project-onboarding-automation/sub-quickbooks-record.png";
-import materialsImage from "../assets/projects/project-onboarding-automation/sub-finish-material-sheet.png";
-import auditImage from "../assets/projects/project-onboarding-automation/sys-audit-service.png";
-import errorHandlerImage from "../assets/projects/project-onboarding-automation/sys-error-handler.png";
+import {
+  mainIntakeAndParser,
+  mainOrchestration,
+  mainOverview,
+  mainValidationAndDeduplication,
+  subFinishMaterialSheet as materialsImage,
+  subProjectWorkspace as workspaceImage,
+  subQuickBooksRecord as quickBooksImage,
+  sysAuditService as auditImage,
+  sysErrorHandler as errorHandlerImage,
+} from "../assets/images/project-onboarding-automation";
 
 export const onboardingCaseStudy = {
   role: "Automation Engineer",
@@ -74,5 +79,15 @@ export const onboardingCaseStudy = {
   included: ["Deterministic parsing for a known proposal template", "Validation before downstream side effects", "Idempotent processing through the source event ID", "Drive, QuickBooks, Sheets, Gmail, and Slack integrations", "Run-level and step-level audit logging", "Centralized operator notifications", "Happy-path and failure-path fixtures", "Sandbox-ready workflow exports and synthetic examples"],
   excluded: ["AI interpretation of arbitrary contracts", "Automatic business decisions", "Automatic rollback across independent systems", "Fully automated resume-from-failure workflows", "Production deployment hardening", "A claim of live client production usage"],
   capabilities: ["Workflow architecture", "Separation of responsibilities", "API and platform integrations", "State management", "Idempotency", "Validation before side effects", "Audit logging and observability", "Failure classification", "Human-in-the-loop recovery", "Failure-path testing"],
-  visuals: { mainImage, workspaceImage, quickBooksImage, materialsImage, auditImage, errorHandlerImage },
+  visuals: {
+    mainOverview,
+    mainIntakeAndParser,
+    mainValidationAndDeduplication,
+    mainOrchestration,
+    workspaceImage,
+    quickBooksImage,
+    materialsImage,
+    auditImage,
+    errorHandlerImage,
+  },
 } as const;

@@ -1,10 +1,11 @@
 import type { Project } from "../types/content";
-import mainOverview from "../assets/projects/project-onboarding-automation/main-overview.png";
-import mainOrchestration from "../assets/projects/project-onboarding-automation/main-orchestration.png";
-import validationAndDeduplication from "../assets/projects/project-onboarding-automation/main-validation-and-deduplication.png";
-import projectWorkspace from "../assets/projects/project-onboarding-automation/sub-project-workspace.png";
-import errorHandler from "../assets/projects/project-onboarding-automation/sys-error-handler.png";
-import slackError from "../assets/projects/project-onboarding-automation/error-client-email-not-found.png";
+import {
+  mainOrchestration,
+  mainOverview,
+  mainValidationAndDeduplication as validationAndDeduplication,
+  subProjectWorkspace as projectWorkspace,
+  sysErrorHandler as errorHandler,
+} from "../assets/images/project-onboarding-automation";
 
 export const projects: Project[] = [
   {
@@ -37,7 +38,6 @@ export const projects: Project[] = [
       { src: validationAndDeduplication, alt: "Validation and duplicate prevention workflow" },
       { src: projectWorkspace, alt: "Google Drive project workspace sub-workflow" },
       { src: errorHandler, alt: "Shared n8n system error handler workflow" },
-      { src: slackError, alt: "Operator-facing missing client email error in Slack" },
     ],
   },
 ];

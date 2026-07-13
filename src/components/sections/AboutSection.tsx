@@ -1,5 +1,5 @@
 import { profile } from "../../content/profile";
-import profilePhoto from "../../../IMG_2989_VSCO.JPG";
+import profilePhoto from "../../assets/images/profile-photo.jpg";
 import { Icon } from "../ui/Icon";
 import { AboutStatsMotion } from "../ui/AboutStatsMotion";
 import { SectionHeading } from "../ui/SectionHeading";
