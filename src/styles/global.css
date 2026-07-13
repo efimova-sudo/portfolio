@@ -2159,6 +2159,10 @@ html.lenis body {
 }
 
 /* Current project case-study design */
+.case-study.project-detail {
+  width: min(calc(100% - 64px), 1140px);
+}
+
 .case-study .project-detail-hero { gap: 28px; }
 .case-study .case-hero-grid { grid-template-columns: minmax(0, 1fr) 490px; }
 .case-study .project-detail-summary { max-width: 680px; font-size: 1rem; line-height: 1.72; }
@@ -2428,6 +2432,11 @@ html.lenis body {
 .outputs-columns span { color: var(--accent-orange); font-size: 1.05rem; }
 
 .case-study .test-matrix { width: min(100%, 854px); margin: 0 auto; }
+.case-study .case-testing .case-section-header > p {
+  width: min(100%, 854px);
+  margin-inline: auto;
+  text-align: center;
+}
 .case-study .test-matrix table { min-width: 854px; }
 .case-study .test-matrix th:first-child,
 .case-study .test-matrix td:first-child { width: 420px; }
@@ -2457,6 +2466,7 @@ html.lenis body {
 }
 
 @media (max-width: 620px) {
+  .case-study.project-detail { width: min(calc(100% - 28px), 1140px); }
   .case-study .project-detail-hero > .case-image img { height: auto; }
   .case-title-line { gap: 20px; }
   .case-title-line > span { min-width: 48px; }

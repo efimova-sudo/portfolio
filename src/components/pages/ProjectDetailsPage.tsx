@@ -220,7 +220,7 @@ export function ProjectDetailsPage({ project }: Props) {
 
       <section className="case-section">
         <SectionHeader title="Outcome" />
-        <div className="case-copy outcome-copy"><p>The completed system demonstrates how a repetitive operational checklist can be transformed into a maintainable, observable, and reusable automation.</p><p>It provides consistent setup across multiple platforms, validation before side effects, duplicate protection, traceable execution, centralized failure notifications, and clear recovery context.</p><p>The project is a sandbox-ready portfolio implementation rather than a production deployment, but its structure reflects production-oriented automation practices.</p></div>
+        <div className="case-copy outcome-copy"><p>The completed system demonstrates how a repetitive operational checklist can be transformed into a maintainable, observable, and reusable automation.</p><p>It provides consistent setup across multiple platforms, validation before side effects, duplicate protection, traceable execution, centralized failure notifications, and clear recovery context.</p></div>
         <div className="capability-grid">{cs.capabilities.map((item) => <span key={item}>{item}</span>)}</div>
       </section>
 
