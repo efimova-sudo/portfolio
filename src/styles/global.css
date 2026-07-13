@@ -2166,8 +2166,11 @@ html.lenis body {
 .case-study .project-detail-hero { gap: 28px; }
 .case-study .case-hero-grid { grid-template-columns: minmax(0, 1fr) 490px; }
 .case-study .project-detail-summary { max-width: 680px; font-size: 1rem; line-height: 1.72; }
-.case-study .project-detail-hero > .case-image { margin-top: 0; }
-.case-study .project-detail-hero > .case-image img { height: 344px; max-height: none; object-fit: contain; }
+.case-study .case-hero-details { display: flex; flex-direction: column; gap: 22px; }
+.case-study .case-facts-motion,
+.case-study .case-facts-motion .case-facts { height: 100%; }
+.case-study .case-hero-image-motion .case-image { margin-top: 0; }
+.case-study .case-hero-image-motion .case-image img { height: 344px; max-height: none; object-fit: contain; }
 
 .case-study .case-section {
   display: flex;
@@ -2205,6 +2208,8 @@ html.lenis body {
   line-height: 1.02;
   letter-spacing: -0.035em;
 }
+
+.case-title-line > .kinetic-heading-shell { flex: 0 0 auto; }
 
 .case-title-line > span {
   width: min(100%, 420px);
@@ -2467,7 +2472,7 @@ html.lenis body {
 
 @media (max-width: 620px) {
   .case-study.project-detail { width: min(calc(100% - 28px), 1140px); }
-  .case-study .project-detail-hero > .case-image img { height: auto; }
+  .case-study .case-hero-image-motion .case-image img { height: auto; }
   .case-title-line { gap: 20px; }
   .case-title-line > span { min-width: 48px; }
   .workflow-snake-header { align-items: flex-start; flex-direction: column; gap: 8px; }
