@@ -1,11 +1,9 @@
-import validationImage from "../assets/projects/project-onboarding-automation/main-validation-and-deduplication.png";
+import mainImage from "../assets/projects/project-onboarding-automation/main-orchestration.png";
 import workspaceImage from "../assets/projects/project-onboarding-automation/sub-project-workspace.png";
 import quickBooksImage from "../assets/projects/project-onboarding-automation/sub-quickbooks-record.png";
 import materialsImage from "../assets/projects/project-onboarding-automation/sub-finish-material-sheet.png";
 import auditImage from "../assets/projects/project-onboarding-automation/sys-audit-service.png";
 import errorHandlerImage from "../assets/projects/project-onboarding-automation/sys-error-handler.png";
-import invalidPdfErrorImage from "../assets/projects/project-onboarding-automation/error-invalid-pdf-structure.png";
-import missingEmailErrorImage from "../assets/projects/project-onboarding-automation/error-client-email-not-found.png";
 
 export const onboardingCaseStudy = {
   role: "Automation Engineer",
@@ -51,11 +49,12 @@ export const onboardingCaseStudy = {
     ["Manual recovery instead of unsafe rollback", "Independent external platforms do not share a transaction boundary, so partial completion is recorded for informed recovery instead of unsafe automatic deletion."],
   ],
   reliability: [
-    ["Fail-fast validation", "Missing client data, project details, milestones, or unsupported contract structures stop the process before external side effects."],
-    ["Duplicate protection", "The source Slack event ID prevents repeated folders, records, messages, sheets, and invoices."],
-    ["Centralized audit logging", "Run and step records track status, successful and failed steps, timestamps, and available resource identifiers."],
-    ["Controlled retries", "Automatic retries are reserved for rate limits, timeouts, and selected server errors; invalid input and authentication failures require review."],
-    ["Partial-failure awareness", "If a platform fails after earlier resources were created, the system records a partial failure instead of reporting the process as untouched."],
+    ["Fail-fast validation", "Required contract fields are checked before any external resources are created. Invalid client, project, or milestone data stops the workflow before partial records can be produced."],
+    ["Duplicate protection", "The original Slack event ID acts as an idempotency key, so replaying an event does not recreate Drive, QuickBooks, email, sheet, or invoice resources."],
+    ["Centralized audit logging", "Run- and step-level events show when execution started, which steps completed, where it failed, and which external resources already exist."],
+    ["Structured error handling", "Unhandled failures go to one shared workflow and are classified as validation, authentication, rate-limit, transient API, or data-contract errors."],
+    ["Recovery-oriented notifications", "Slack alerts include the execution, failed step, error code, retryability, created resources, and the last successful operation."],
+    ["Controlled partial failures", "External systems share no transaction boundary, so the MVP records partial completion and routes it for manual review instead of attempting unsafe automatic rollback."],
   ],
   errorTypes: ["VALIDATION_FAILED", "EXTRACTION_FAILED", "DUPLICATE_CONFLICT", "API_AUTH_FAILED", "API_RATE_LIMITED", "API_TRANSIENT", "API_PERMANENT", "DATA_CONTRACT_FAILED", "AUDIT_FAILED", "UNKNOWN"],
   tests: [
@@ -75,5 +74,5 @@ export const onboardingCaseStudy = {
   included: ["Deterministic parsing for a known proposal template", "Validation before downstream side effects", "Idempotent processing through the source event ID", "Drive, QuickBooks, Sheets, Gmail, and Slack integrations", "Run-level and step-level audit logging", "Centralized operator notifications", "Happy-path and failure-path fixtures", "Sandbox-ready workflow exports and synthetic examples"],
   excluded: ["AI interpretation of arbitrary contracts", "Automatic business decisions", "Automatic rollback across independent systems", "Fully automated resume-from-failure workflows", "Production deployment hardening", "A claim of live client production usage"],
   capabilities: ["Workflow architecture", "Separation of responsibilities", "API and platform integrations", "State management", "Idempotency", "Validation before side effects", "Audit logging and observability", "Failure classification", "Human-in-the-loop recovery", "Failure-path testing"],
-  visuals: { validationImage, workspaceImage, quickBooksImage, materialsImage, auditImage, errorHandlerImage, invalidPdfErrorImage, missingEmailErrorImage },
+  visuals: { mainImage, workspaceImage, quickBooksImage, materialsImage, auditImage, errorHandlerImage },
 } as const;
