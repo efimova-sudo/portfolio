@@ -1,5 +1,6 @@
 import { skillCategories } from "../../content/skills";
 import { SectionHeading } from "../ui/SectionHeading";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function SkillsSection() {
   const columns = [skillCategories.slice(0, 3), skillCategories.slice(3)];
@@ -9,8 +10,9 @@ export function SkillsSection() {
       <SectionHeading title="Skills" withLine />
       <div className="skills-columns">
         {columns.map((categories, columnIndex) => <div className="skills-column" key={columnIndex}>
-          {categories.map((category) => (
-            <article className="skill-card" key={category.id}>
+          {categories.map((category, categoryIndex) => (
+            <ScrollReveal delay={categoryIndex * 0.07} key={category.id}>
+            <article className="skill-card" data-spotlight>
               <h3>{category.title}</h3>
               <span aria-hidden="true" className="skill-card-divider" />
               <ul className="tag-list">
@@ -21,6 +23,7 @@ export function SkillsSection() {
                 ))}
               </ul>
             </article>
+            </ScrollReveal>
           ))}
         </div>)}
       </div>

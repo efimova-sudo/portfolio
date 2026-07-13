@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header className="site-header">
       <a className="site-mark" href="#top" aria-label="Back to top">
-        ANASTASIA EFIMOVA / AI / AUTO / BACKEND
+        ANASTASIA EFIMOVA / AI SOLUTIONS ENGINEER
       </a>
       <nav aria-label="Main navigation">
         <ul className="nav-list">

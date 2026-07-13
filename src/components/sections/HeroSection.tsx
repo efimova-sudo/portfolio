@@ -2,6 +2,11 @@ import { contacts } from "../../content/contacts";
 import { profile } from "../../content/profile";
 import { skillCategories } from "../../content/skills";
 import { Icon } from "../ui/Icon";
+import { KineticHeading } from "../ui/KineticHeading";
+import { HeroTerminalMotion } from "../ui/HeroTerminalMotion";
+import { HeroParticles } from "../ui/HeroParticles";
+import { TerminalTypewriter } from "../ui/TerminalTypewriter";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 const socialIcons = {
   Email: "email",
@@ -15,8 +20,10 @@ const terminalSkills = ["n8n", "LLM workflows", "AI agents", ".NET/C#", "ASP.NET
 export function HeroSection() {
   return (
     <section className="hero section" id="top">
+      <HeroParticles />
       <div className="hero-copy">
-        <h1>AI Solutions &amp;<br />Automation<br />Engineer.</h1>
+        <KineticHeading as="h1" hero>AI Solutions &amp;<br />Automation<br />Engineer.</KineticHeading>
+        <ScrollReveal className="hero-details">
         <div className="hero-intro">
           <p>Hi, I’m <strong>{profile.name}.</strong> I design and build AI-powered workflows,</p>
           <p>business automations, agents, and integrations — backed by six years of C#/.NET engineering.</p>
@@ -37,10 +44,12 @@ export function HeroSection() {
           </div>
         </div>
         <p className="hero-location"><Icon name="location" size={16} />{profile.location} · {profile.remoteAvailability}</p>
+        </ScrollReveal>
       </div>
-      <div className="hero-terminal" aria-label="Profile summary in a terminal-style card">
+      <HeroTerminalMotion className="hero-terminal-motion">
+      <div className="hero-terminal" data-spotlight aria-label="Profile summary in a terminal-style card">
         <div className="terminal-header"><span className="terminal-controls"><i /><i /><i /></span><span>anastasia@portfolio — zsh</span></div>
-        <div className="terminal-body">
+        <TerminalTypewriter>
           <p className="terminal-command">~/portfolio › cat profile.json</p>
           <dl className="terminal-data">
             <div><dt>"name":</dt><dd>"{profile.name}"</dd></div>
@@ -50,12 +59,13 @@ export function HeroSection() {
           </dl>
           <p className="terminal-command">~/portfolio › ls ./skills</p>
           <div className="terminal-skills">
-            {terminalSkills.filter((name) => name === "AI agents" || skillCategories.some((category) => category.skills.some((skill) => skill.name === name))).map((skill) => <span key={skill}>{skill}</span>)}
+            {terminalSkills.filter((name) => name === "AI agents" || skillCategories.some((category) => category.skills.some((skill) => skill.name === name))).map((skill) => <span className="terminal-visible" key={skill}>{skill}</span>)}
           </div>
           <p className="terminal-command">~/portfolio › echo $FOCUS</p>
           <p className="terminal-focus">AI solutions · automation · integrations</p>
-        </div>
+        </TerminalTypewriter>
       </div>
+      </HeroTerminalMotion>
     </section>
   );
 }

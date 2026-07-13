@@ -2,6 +2,8 @@ import { projects } from "../../content/projects";
 import type { Project } from "../../types/content";
 import { Icon } from "../ui/Icon";
 import { SectionHeading } from "../ui/SectionHeading";
+import { ScrollParallax } from "../ui/ScrollParallax";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 type ProjectCardProps = {
   project?: Project;
@@ -17,7 +19,9 @@ function ProjectCard({ project, index }: ProjectCardProps) {
   const image = project?.images?.[0];
 
   return (
-    <article className="project-card">
+    <ScrollParallax direction={index % 2 === 0 ? 1 : -1} strength={2.5}>
+    <ScrollReveal delay={index * 0.08}>
+    <article className="project-card" data-spotlight>
       <div className="project-preview">
         {image ? <img src={image.src} alt={image.alt} /> : <><Icon name="image" size={30} /><span>PROJECT PREVIEW</span></>}
       </div>
@@ -32,6 +36,8 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       </ul>
       <span className="sr-only">Project {String(index + 1).padStart(2, "0")}</span>
     </article>
+    </ScrollReveal>
+    </ScrollParallax>
   );
 }
 
