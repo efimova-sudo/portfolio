@@ -9,6 +9,18 @@ import {
 
 export const projects: Project[] = [
   {
+    id: "ai-client-delivery-kit",
+    slug: "ai-client-delivery-kit",
+    title: "AI Client Delivery Kit",
+    shortDescription: "A reusable, reviewable, and client-safe operating system for packaging AI-assisted delivery across prompts, automation, validation, and handoff.",
+    detailDescription: "A compact delivery-operations toolkit that turns one-off AI work into a versioned, testable, review-gated system with client configuration, prompt operations, GitHub automation, security controls, and handoff documentation.",
+    problem: "AI-assisted client work often starts as useful but unstructured chat activity that is difficult to review, repeat, adapt, secure, or transfer to another owner.",
+    solution: "A configurable delivery kit combines versioned prompts, explicit client context, dry-run Python automation, CI validation, quality review, sample outputs, and security-first handoff guidance.",
+    role: "Designed the delivery operating model, prompt library conventions, client configuration contract, Python automation, GitHub Actions workflows, test suite, security posture, sample outputs, and handoff documentation.",
+    technologies: ["Python", "YAML", "GitHub Actions", "Claude", "ChatGPT", "GitHub MCP", "pytest"],
+    githubUrl: "https://github.com/efimova-sudo/ai-client-delivery-kit",
+  },
+  {
     id: "project-onboarding-automation",
     slug: "project-onboarding-automation",
     title: "Project Onboarding Automation",
