@@ -2800,7 +2800,7 @@ html.lenis body {
 
 /* AI Client Delivery Kit case study */
 .delivery-kit-case {
-  width: min(calc(100% - 64px), var(--content-width));
+  width: min(calc(100% - 64px), 1140px);
   margin: 0 auto;
   padding-bottom: 112px;
 }
@@ -2812,6 +2812,11 @@ html.lenis body {
   padding-top: 72px;
 }
 
+.dk-hero-details { display: flex; flex-direction: column; gap: 22px; }
+.dk-facts-motion,
+.dk-facts-motion .dk-facts { height: 100%; }
+.dk-operating-model-motion { min-width: 0; }
+
 .dk-hero-grid,
 .dk-two-column {
   display: grid;
@@ -2821,6 +2826,8 @@ html.lenis body {
 }
 
 .dk-hero-grid { grid-template-columns: minmax(0, 1fr) 490px; }
+.dk-aligned-aside-grid { grid-template-columns: minmax(0, 1fr) 490px; }
+.dk-problem-reversed { grid-template-columns: 490px minmax(0, 1fr); }
 .dk-hero-copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
 .dk-hero-copy .eyebrow { margin-bottom: 0; }
 .dk-hero-copy h1 { display: block; width: 100%; padding: 0 0 .08em; background: none; -webkit-text-fill-color: currentColor; }
@@ -2875,6 +2882,13 @@ html.lenis body {
 .dk-tags li { padding: 9px 11px; border: 1px solid #493039; border-radius: 7px; background: #1b1517; color: var(--muted); font-family: var(--font-mono); font-size: .69rem; font-weight: 500; text-transform: uppercase; }
 .dk-fact .dk-tags { gap: 8px; }
 .dk-fact .dk-tags li { padding: 8px 10px; border-color: #493638; border-radius: 6px; background: #191415; font-size: .7rem; text-transform: none; }
+
+.delivery-kit-case .case-hover-card[data-spotlight]::before,
+.delivery-kit-case .dk-review-flow[data-spotlight]::before,
+.delivery-kit-case .dk-spotlight-item[data-spotlight]::before { z-index: 0; }
+.delivery-kit-case .case-hover-card[data-spotlight] > *,
+.delivery-kit-case .dk-review-flow[data-spotlight] > *,
+.delivery-kit-case .dk-spotlight-item[data-spotlight] > * { position: relative; z-index: 1; }
 
 .dk-operating-model { padding: 22px; border-radius: 16px; }
 .dk-panel-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; color: var(--muted); font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; }
@@ -2974,6 +2988,60 @@ html.lenis body {
 .dk-final-cta h2 { width: fit-content; margin: 0; padding-bottom: .08em; background: linear-gradient(90deg, var(--accent-pink), var(--accent-orange) 58%, var(--text)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 3.625rem); line-height: 1.02; letter-spacing: -.045em; }
 .dk-final-cta > p:not(.eyebrow) { width: min(760px, 100%); }
 
+@media (hover: hover) and (pointer: fine) {
+  .delivery-kit-case .dk-tags li {
+    transition: color 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  }
+
+  .delivery-kit-case .dk-tags li:hover,
+  .delivery-kit-case .dk-tags li:focus-visible {
+    border-color: #ff765f;
+    background: linear-gradient(90deg, var(--accent-red), var(--accent-orange) 55%, var(--accent-pink));
+    box-shadow: 0 8px 18px -7px rgba(255, 51, 78, 0.48);
+    color: #fff;
+    transform: translateY(-2px) scale(1.035);
+  }
+
+  .delivery-kit-case .dk-fact,
+  .delivery-kit-case .dk-flow-card > div,
+  .delivery-kit-case .dk-platforms article {
+    transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .delivery-kit-case .dk-fact:hover,
+  .delivery-kit-case .dk-fact:focus-within,
+  .delivery-kit-case .dk-flow-card > div:hover,
+  .delivery-kit-case .dk-flow-card > div:focus-within,
+  .delivery-kit-case .dk-platforms article:hover,
+  .delivery-kit-case .dk-platforms article:focus-within {
+    border-color: #60404c;
+    background: linear-gradient(90deg, rgba(255, 116, 51, 0.09), rgba(255, 51, 78, 0.055), rgba(17, 14, 14, 0.76));
+    box-shadow: 0 10px 22px -14px rgba(255, 116, 51, 0.58);
+    transform: translateX(10px);
+  }
+
+  .delivery-kit-case .dk-platforms article:hover,
+  .delivery-kit-case .dk-platforms article:focus-within { transform: translateX(6px); }
+
+  .delivery-kit-case .dk-model-group article,
+  .delivery-kit-case .dk-sequence li,
+  .delivery-kit-case .dk-architecture article > div,
+  .delivery-kit-case .dk-review-group strong {
+    transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .delivery-kit-case .dk-model-group article:hover,
+  .delivery-kit-case .dk-sequence li:hover,
+  .delivery-kit-case .dk-architecture article > div:hover,
+  .delivery-kit-case .dk-review-group strong:hover {
+    border-color: #60404c;
+    background: linear-gradient(135deg, rgba(42, 23, 31, 0.9), rgba(23, 19, 22, 0.94));
+    box-shadow: 0 16px 28px -15px rgba(255, 51, 78, 0.42), 0 10px 20px -14px rgba(255, 116, 51, 0.55);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+}
+
 .delivery-kit-project-preview { display: grid; width: min(92%, 640px); grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .delivery-kit-project-preview > div { position: relative; min-width: 0; padding: 18px 14px; border: 1px solid #493039; border-radius: 9px; background: linear-gradient(135deg, #151111, #1b1517); }
 .delivery-kit-project-preview > div:not(:last-child)::after { position: absolute; top: 50%; right: -10px; z-index: 1; color: var(--accent-orange); content: "→"; transform: translate(50%, -50%); }
@@ -2990,7 +3058,6 @@ html.lenis body {
 }
 
 @media (max-width: 780px) {
-  .delivery-kit-case { width: min(calc(100% - 32px), var(--content-width)); }
   .dk-hero { padding-top: 42px; }
   .dk-hero-grid, .dk-two-column { grid-template-columns: 1fr; gap: 30px; }
   .dk-title-line { gap: 18px; }
@@ -3009,9 +3076,13 @@ html.lenis body {
   .dk-final-cta { padding: 42px 28px; }
 }
 
+@media (max-width: 620px) {
+  .delivery-kit-case { width: min(calc(100% - 28px), 1140px); }
+}
+
 @media (max-width: 520px) {
   html, body { overflow-x: hidden; }
-  .delivery-kit-case { width: calc(100% - 32px); max-width: calc(100% - 32px); overflow-x: clip; }
+  .delivery-kit-case { width: calc(100% - 28px); max-width: calc(100% - 28px); overflow-x: clip; }
   .dk-hero, .dk-hero-grid, .dk-hero-copy, .dk-actions, .dk-facts { min-width: 0; max-width: 100%; }
   .dk-hero-copy h1 { font-size: 3.2rem; line-height: .98; }
   .dk-actions { flex-direction: column; align-items: stretch; }
