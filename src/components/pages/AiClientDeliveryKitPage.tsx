@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { aiClientDeliveryKitCaseStudy as cs } from "../../content/aiClientDeliveryKitCaseStudy";
 import type { Project } from "../../types/content";
 import { Icon } from "../ui/Icon";
@@ -6,10 +6,16 @@ import { HeroParticles } from "../ui/HeroParticles";
 import { KineticHeading } from "../ui/KineticHeading";
 import { ParticleDivider } from "../ui/ParticleDivider";
 import { ScrollGlintLine } from "../ui/ScrollGlintLine";
-import { ScrollParallax } from "../ui/ScrollParallax";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
 type Props = { project: Project };
+
+const operatingModelSteps = [
+  ["01", "Client config", "Approved context, scope and controls"],
+  ["02", "Prompt library", "Versioned tasks with review criteria"],
+  ["03", "Validate + automate", "Tests, CI and GitHub digest"],
+  ["04", "Deliver + hand off", "Reviewed outputs and operating docs"],
+] as const;
 
 function SectionHeader({ title, intro }: { title: string; intro?: string }) {
   return (
@@ -38,16 +44,89 @@ function TestTable({ tests, index }: { tests: readonly (readonly [string, string
   );
 }
 
-function TagMarquee({ items, label }: { items: readonly string[]; label: string }) {
+function TagMarquee({ items, label, direction = "left" }: { items: readonly string[]; label: string; direction?: "left" | "right" }) {
   return (
-    <div className="capability-marquee" aria-label={`${label}: ${items.join(", ")}`}>
+    <div className={`capability-marquee is-${direction}ward`} aria-label={`${label}: ${items.join(", ")}`}>
       <div className="capability-marquee-track">
-        {[0, 1].map((copyIndex) => (
-          <div className="capability-grid capability-marquee-group" aria-hidden={copyIndex === 1 ? "true" : undefined} key={copyIndex}>
+        {[0, 1, 2, 3].map((copyIndex) => (
+          <div className="capability-grid capability-marquee-group" aria-hidden={copyIndex > 0 ? "true" : undefined} key={copyIndex}>
             {items.map((item) => <span key={`${copyIndex}-${item}`}>{item}</span>)}
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+function DeliveryWorkflowSnake() {
+  const diagramRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const diagram = diagramRef.current;
+    if (!diagram || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const steps = Array.from(diagram.querySelectorAll<HTMLElement>(".workflow-snake-steps li"));
+    let frame = 0;
+
+    const reset = () => {
+      steps.forEach((step) => {
+        step.style.setProperty("--step-glow", "0");
+        step.classList.remove("is-nearest-step");
+      });
+    };
+
+    const update = (event: PointerEvent) => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        let nearestIndex = -1;
+        let nearestDistance = Number.POSITIVE_INFINITY;
+
+        steps.forEach((step, index) => {
+          const node = step.querySelector<HTMLElement>("i") ?? step;
+          const bounds = node.getBoundingClientRect();
+          const distance = Math.hypot(event.clientX - (bounds.left + bounds.width / 2), event.clientY - (bounds.top + bounds.height / 2));
+          step.style.setProperty("--step-glow", "0");
+          step.classList.remove("is-nearest-step");
+          if (distance < nearestDistance) {
+            nearestIndex = index;
+            nearestDistance = distance;
+          }
+        });
+
+        if (nearestIndex >= 0) {
+          steps[nearestIndex]?.style.setProperty("--step-glow", "1");
+          steps[nearestIndex]?.classList.add("is-nearest-step");
+        }
+      });
+    };
+
+    diagram.addEventListener("pointermove", update, { passive: true });
+    diagram.addEventListener("pointerleave", reset);
+    return () => {
+      cancelAnimationFrame(frame);
+      reset();
+      diagram.removeEventListener("pointermove", update);
+      diagram.removeEventListener("pointerleave", reset);
+    };
+  }, []);
+
+  return (
+    <div className="workflow-snake dk-workflow-snake case-hover-card" data-spotlight aria-label="AI client delivery workflow sequence" ref={diagramRef}>
+      <div className="workflow-snake-header"><span>END-TO-END DELIVERY SEQUENCE</span><strong>8 GOVERNED STEPS</strong></div>
+      <svg aria-hidden="true" className="workflow-snake-line" viewBox="0 0 1180 430" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="dk-workflow-path-gradient" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="#ff7433" />
+            <stop offset="0.52" stopColor="#ff334e" />
+            <stop offset="1" stopColor="#ff3ca6" />
+          </linearGradient>
+        </defs>
+        <path className="workflow-path-underlay" d="M 100 118 H 950 C 1070 118 1138 150 1138 198 C 1138 246 1070 278 950 278 H 160" />
+        <path className="workflow-path-accent" d="M 100 118 H 950 C 1070 118 1138 150 1138 198 C 1138 246 1070 278 950 278 H 160" />
+      </svg>
+      <ol className="workflow-snake-steps">
+        {cs.deliverySteps.map(([number, label]) => <li key={number}><i aria-hidden="true" /><strong>STEP {number}</strong><p>{label}</p></li>)}
+      </ol>
     </div>
   );
 }
@@ -96,33 +175,23 @@ export function AiClientDeliveryKitPage({ project }: Props) {
             </aside>
           </ScrollReveal>
         </div>
-        <ScrollParallax className="dk-operating-model-motion" strength={2}>
-          <ScrollReveal>
-            <div className="dk-operating-model case-hover-card" data-spotlight>
-              <div className="dk-panel-heading"><span>CLIENT DELIVERY OPERATING MODEL</span><strong>DRY-RUN FIRST / REVIEW GATED</strong></div>
-              <div className="dk-model-flow">
-                {[
-                  ["01", "Client config", "Approved context, scope and controls"],
-                  ["02", "Prompt library", "Versioned tasks with review criteria"],
-                  ["03", "Validate + automate", "Tests, CI and GitHub digest"],
-                  ["04", "Deliver + hand off", "Reviewed outputs and operating docs"],
-                ].map(([number, title, copy], index) => <div className="dk-model-group" key={title}><article className="dk-spotlight-item" data-spotlight><span>{number}</span><h2>{title}</h2><p>{copy}</p></article>{index < 3 ? <b aria-hidden="true">→</b> : null}</div>)}
-              </div>
-            </div>
-          </ScrollReveal>
-        </ScrollParallax>
       </section>
 
       <section className="dk-section">
         <SectionHeader title="Overview" />
         <div className="dk-two-column dk-aligned-aside-grid">
-          <ScrollReveal className="dk-copy" direction="left" distance={96}>
+          <ScrollReveal direction="left" distance={96}>
+            <div className="dk-operating-model dk-operating-model-vertical case-hover-card" data-spotlight>
+              <div className="dk-panel-heading"><span>CLIENT DELIVERY OPERATING MODEL</span><strong>DRY-RUN FIRST / REVIEW GATED</strong></div>
+              <div className="dk-model-flow">
+                {operatingModelSteps.map(([number, title, copy], index) => <div className="dk-model-group" key={title}><article className="dk-spotlight-item" data-spotlight><div className="dk-model-card-head"><h2>{title}</h2><span>{number}</span></div><p>{copy}</p></article>{index < operatingModelSteps.length - 1 ? <b aria-hidden="true">↓</b> : null}</div>)}
+              </div>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal className="dk-copy" direction="right" distance={96}>
             <p>AI-assisted client work often begins as effective but one-off chat activity. The outputs may be useful, yet the process is difficult to inspect, repeat, adapt, or hand over safely.</p>
             <p>I built this kit as a compact operating pattern for client delivery: approved context enters through configuration, reusable prompts define the work, automation validates the system, and every external deliverable passes through explicit review and handoff controls.</p>
             <TagList items={cs.attributes} label="Project attributes" />
-          </ScrollReveal>
-          <ScrollReveal direction="right" distance={96}>
-            <div className="dk-flow-card case-hover-card" data-spotlight>{cs.flowSummary.map((item, index) => <div className="dk-spotlight-item" data-spotlight key={item}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></div>)}</div>
           </ScrollReveal>
         </div>
       </section>
@@ -130,7 +199,11 @@ export function AiClientDeliveryKitPage({ project }: Props) {
       <section className="dk-section">
         <SectionHeader title="The Problem" />
         <div className="dk-two-column dk-problem-reversed">
-          <ScrollReveal direction="left" distance={96}>
+          <ScrollReveal className="dk-problem-copy" direction="left" distance={96}>
+            <p className="dk-column-intro">Without a delivery system, high-value AI work remains fragile:</p>
+            <ul className="dk-arrow-list">{cs.problemItems.map((item) => <li key={item}>{item}</li>)}</ul>
+          </ScrollReveal>
+          <ScrollReveal className="dk-problem-card-wrap" direction="right" distance={96}>
             <article className="dk-challenge case-hover-card" data-spotlight>
               <span>DESIGN CHALLENGE</span>
               <h3>Make AI delivery repeatable without turning a lightweight workflow into a heavy platform.</h3>
@@ -138,20 +211,17 @@ export function AiClientDeliveryKitPage({ project }: Props) {
               <p>The system needed explicit inputs and outputs, prompt metadata, dry-run automation, network-free tests, least-privilege guidance, human review, and a handoff package that another delivery owner could operate.</p>
             </article>
           </ScrollReveal>
-          <ScrollReveal direction="right" distance={96}>
-            <p className="dk-column-intro">Without a delivery system, high-value AI work remains fragile:</p>
-            <ul className="dk-arrow-list">{cs.problemItems.map((item) => <li key={item}>{item}</li>)}</ul>
-          </ScrollReveal>
         </div>
       </section>
 
       <section className="dk-section" id="solution">
         <SectionHeader title="The Solution" intro="A configurable delivery pipeline that keeps client context, prompt operations, automation, review, and handoff connected — but independently inspectable." />
-        <ScrollReveal><div className="dk-sequence case-hover-card" data-spotlight>
-          <div className="dk-panel-heading"><span>END-TO-END DELIVERY SEQUENCE</span><strong>8 GOVERNED STEPS</strong></div>
-          <ol>{cs.deliverySteps.map(([number, label]) => <li className="dk-spotlight-item" data-spotlight key={number}><span>{number}</span><b>{label}</b></li>)}</ol>
-        </div></ScrollReveal>
-        <ScrollReveal delay={0.08}><div className="dk-platforms">{cs.platforms.map(([name, purpose]) => <article className="dk-spotlight-item" data-spotlight key={name}><h3>{name}</h3><p>{purpose}</p></article>)}</div></ScrollReveal>
+        <ScrollReveal><DeliveryWorkflowSnake /></ScrollReveal>
+        <ScrollReveal delay={0.08}>
+          <div className="integration-panel case-hover-card" data-spotlight>
+            <div className="integration-grid">{cs.platforms.map(([name, purpose]) => <article className="integration-card" data-spotlight key={name}><h3>{name}</h3><p>{purpose}</p></article>)}</div>
+          </div>
+        </ScrollReveal>
       </section>
 
       <section className="dk-section">
@@ -168,8 +238,7 @@ export function AiClientDeliveryKitPage({ project }: Props) {
       <section className="dk-section">
         <SectionHeader title="Reliability and Safety" intro="The project treats safe data handling, predictable execution, and reviewability as product requirements — not deployment notes." />
         <ScrollReveal delay={0.06}><div className="dk-safety-grid">{cs.safetyControls.map(([title, copy], index) => <article className="case-hover-card" data-spotlight key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></ScrollReveal>
-        <ScrollReveal delay={0.1}><div className="dk-review-flow" data-spotlight>{cs.reviewFlow.map((item, index) => <div className="dk-review-group" key={item}><strong className="dk-spotlight-item" data-spotlight>{item}</strong>{index < cs.reviewFlow.length - 1 ? <span aria-hidden="true">→</span> : null}</div>)}</div></ScrollReveal>
-        <ScrollReveal delay={0.12}><TagMarquee items={cs.safetyTags} label="Safety controls" /></ScrollReveal>
+        <ScrollReveal delay={0.12}><TagMarquee items={cs.safetyTags} label="Safety controls" direction="left" /></ScrollReveal>
       </section>
 
       <section className="dk-section">
@@ -185,7 +254,7 @@ export function AiClientDeliveryKitPage({ project }: Props) {
       <section className="dk-section">
         <SectionHeader title="Outcome" />
         <ScrollReveal className="dk-outcome-copy"><p>The kit turns AI delivery from a sequence of private chats into an inspectable system that can be reviewed, adapted, tested, and owned by more than one person.</p><p>It demonstrates practical prompt operations, lightweight automation, explicit safety controls, least-privilege integration guidance, and delivery documentation — without claiming autonomous production behavior or using real client data.</p></ScrollReveal>
-        <ScrollReveal delay={0.08}><TagMarquee items={cs.capabilities} label="Demonstrated capabilities" /></ScrollReveal>
+        <ScrollReveal delay={0.08}><TagMarquee items={cs.capabilities} label="Demonstrated capabilities" direction="right" /></ScrollReveal>
       </section>
 
       <div className="case-closing-statement">
