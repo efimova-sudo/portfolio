@@ -26,7 +26,11 @@ function ProjectCard({ project, index }: ProjectCardProps) {
     <ScrollReveal delay={index * 0.08}>
     <article className="project-card" data-spotlight>
       <div className="project-preview">
-        {image ? <img src={image.src} alt={image.alt} /> : <><Icon name="image" size={30} /><span>PROJECT PREVIEW</span></>}
+        {image ? <img src={image.src} alt={image.alt} /> : project?.id === "ai-client-delivery-kit" ? (
+          <div className="delivery-kit-project-preview" aria-label="AI Client Delivery Kit operating model preview">
+            {['CONFIG', 'PROMPTS', 'VALIDATE', 'HANDOFF'].map((label, previewIndex) => <div key={label}><span>{String(previewIndex + 1).padStart(2, '0')}</span><strong>{label}</strong></div>)}
+          </div>
+        ) : <><Icon name="image" size={30} /><span>PROJECT PREVIEW</span></>}
       </div>
       <h3>{project?.title ?? "Project title pending"}</h3>
       <div className="project-actions">

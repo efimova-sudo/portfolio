@@ -9,16 +9,20 @@ import { SkillsSection } from "../components/sections/SkillsSection";
 import { SpotlightController } from "../components/ui/SpotlightController";
 import { ParticleDivider } from "../components/ui/ParticleDivider";
 import { ProjectDetailsPage } from "../components/pages/ProjectDetailsPage";
+import { AiClientDeliveryKitPage } from "../components/pages/AiClientDeliveryKitPage";
 import { projects } from "../content/projects";
 
 export function App() {
   const projectMatch = window.location.pathname.match(/^\/projects\/([^/]+)\/?$/);
   const selectedProject = projectMatch ? projects.find((project) => project.slug === decodeURIComponent(projectMatch[1])) : undefined;
+  const projectPage = selectedProject?.slug === "ai-client-delivery-kit"
+    ? <AiClientDeliveryKitPage project={selectedProject} />
+    : <ProjectDetailsPage project={selectedProject} />;
   const content = projectMatch ? (
     <>
       <Header />
       <SpotlightController />
-      <ProjectDetailsPage project={selectedProject} />
+      {projectPage}
       <Footer />
     </>
   ) : (
