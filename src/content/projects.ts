@@ -1,4 +1,5 @@
 import type { Project } from "../types/content";
+import casaBawiPreview from "../assets/images/casa-bawi/casa-bawi-preview.png";
 import {
   mainOrchestration,
   mainOverview,
@@ -50,6 +51,23 @@ export const projects: Project[] = [
       { src: validationAndDeduplication, alt: "Validation and duplicate prevention workflow" },
       { src: projectWorkspace, alt: "Google Drive project workspace sub-workflow" },
       { src: errorHandler, alt: "Shared n8n system error handler workflow" },
+    ],
+  },
+  {
+    id: "casa-bawi",
+    slug: "casa-bawi",
+    title: "Casa Bawi Website",
+    shortDescription: "A modern, responsive website concept for Casa Bawi, designed and developed to present the brand with a polished visual system, clear content flow, and smooth user experience.",
+    detailDescription: "A brand-forward website for Casa Bawi combining visual direction, responsive interface design, and frontend implementation into a polished web presence.",
+    problem: "Casa Bawi needed a refined digital presence that could communicate the atmosphere of the brand, organize key content clearly, and feel crafted across desktop and mobile screens.",
+    solution: "Designed and built a responsive website with a strong visual identity, structured sections, focused calls to action, and a production deployment on Vercel.",
+    role: "Developer and designer.",
+    technologies: ["React", "TypeScript", "CSS", "Responsive Design", "Vercel"],
+    githubUrl: "https://github.com/lucabudgen2-lang/casa-bawi-8",
+    demoUrl: "https://casa-bawi-8.vercel.app/",
+    hasCaseStudy: false,
+    images: [
+      { src: casaBawiPreview, alt: "Casa Bawi website preview" },
     ],
   },
 ];

@@ -59,6 +59,7 @@ export type Project = {
   };
   githubUrl?: string;
   demoUrl?: string;
+  hasCaseStudy?: boolean;
   images?: Array<{
     src: string;
     alt: string;

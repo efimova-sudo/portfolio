@@ -14,7 +14,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
   const actions = [
     { label: "GITHUB", href: project?.githubUrl, icon: "github" as const, external: true },
     ...(project ? (project.demoUrl ? [{ label: "LIVE DEMO", href: project.demoUrl, icon: "external-link" as const, external: true }] : []) : [{ label: "LIVE DEMO", href: undefined, icon: "external-link" as const, external: true }]),
-    { label: project ? "VIEW CASE STUDY" : "DETAILS", href: project ? `/projects/${project.slug}` : undefined, icon: "arrow-right" as const, accent: true },
+    ...(project?.hasCaseStudy === false ? [] : [{ label: project ? "VIEW CASE STUDY" : "DETAILS", href: project ? `/projects/${project.slug}` : undefined, icon: "arrow-right" as const, accent: true }]),
   ];
   const image = project?.images?.[0];
   const technologies = project?.technologies.length ? project.technologies : ["TECH STACK PENDING"];
