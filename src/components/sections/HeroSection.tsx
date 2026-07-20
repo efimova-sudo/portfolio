@@ -25,8 +25,7 @@ export function HeroSection() {
         <KineticHeading as="h1" hero>AI Solutions &amp;<br />Automation<br />Engineer.</KineticHeading>
         <ScrollReveal className="hero-details">
         <div className="hero-intro">
-          <p>Hi, I’m <strong>{profile.name}.</strong> I design and build AI-powered workflows,</p>
-          <p>business automations, agents, and integrations — backed by six years of C#/.NET engineering.</p>
+          <p>Hi, I’m <strong>{profile.name}</strong>. I design and build AI-powered workflows, business automations, agents, integrations, and modern web products, backed by six years of C#/.NET engineering experience.</p>
         </div>
         <div className="hero-actions" aria-label="Primary links">
           <a className="button button-primary" href="#projects">

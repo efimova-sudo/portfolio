@@ -16,6 +16,7 @@
   --accent-orange: #ff7433;
   --accent-pink: #ff3ca6;
   --content-width: 1280px;
+  --home-content-width: 1140px;
   --font-heading: "Funnel Sans", Inter, sans-serif;
   --font-mono: "Geist Mono", "SFMono-Regular", Consolas, monospace;
 }
@@ -121,6 +122,11 @@ a {
   border-bottom: 1px solid var(--border);
 }
 
+.home-page .section,
+.home-page .particle-divider {
+  width: min(calc(100% - 64px), var(--home-content-width));
+}
+
 .hero {
   position: relative;
   isolation: isolate;
@@ -221,9 +227,11 @@ h1 {
 }
 
 .hero-intro {
+  max-width: 900px;
   color: var(--muted);
   font-size: 1.1875rem;
   line-height: 1.55;
+  text-wrap: pretty;
 }
 
 .hero-intro p {
@@ -2245,6 +2253,11 @@ html.lenis body {
   .site-header,
   .section {
     width: min(calc(100% - 28px), var(--content-width));
+  }
+
+  .home-page .section,
+  .home-page .particle-divider {
+    width: min(calc(100% - 28px), var(--home-content-width));
   }
 
   .service-grid,

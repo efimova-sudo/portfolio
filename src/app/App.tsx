@@ -29,7 +29,7 @@ export function App() {
     <>
       <Header />
       <SpotlightController />
-      <main>
+      <main className="home-page">
         <HeroSection />
         <AboutSection />
         <SkillsSection />
